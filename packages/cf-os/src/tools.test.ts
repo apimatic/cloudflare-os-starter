@@ -55,7 +55,9 @@ test("reports a command that cannot run as an error, without throwing", async ()
   assert.equal((result.error as NodeJS.ErrnoException | undefined)?.code, "ENOENT");
 });
 
-test("stops waiting on a status read when its signal aborts, leaving it to finish without holding the process", async (t) => {
+// Skipped on Windows, like the Ctrl-C case below: there the read does not outlive the process
+// that started it, so the marker is never written.
+test("stops waiting on a status read when its signal aborts, leaving it to finish without holding the process", { skip: process.platform === "win32" }, async (t) => {
   const dir = mkdtempSync(join(tmpdir(), "cf-os-capture-"));
   t.after(() => rmSync(dir, { recursive: true, force: true }));
   const marker = join(dir, "finished");
