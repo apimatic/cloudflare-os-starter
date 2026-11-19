@@ -35,4 +35,3 @@ export const payerSchema = s.lazySchema(() => s.object({
     taxInfo: s.optional(s.lazy(() => taxInfoSchema)),
     address: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payer.js.map

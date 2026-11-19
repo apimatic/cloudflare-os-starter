@@ -19,4 +19,3 @@ export const networkTokenSchema = s.lazySchema(() => s.object({
     cryptogram: s.optional(s.string().check(s.minLength(28), s.maxLength(32), s.pattern("^.*$"))),
     tokenRequestorId: s.optional(s.string().check(s.minLength(1), s.maxLength(11), s.pattern("^[0-9A-Z_]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=network-token.js.map

@@ -15,4 +15,3 @@ export const bankRequestSchema = s.lazySchema(() => s.object({
     ...bankRequestProperties,
     sepaDebit: s.optional(s.lazy(() => sepaDebitRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=bank-request.js.map

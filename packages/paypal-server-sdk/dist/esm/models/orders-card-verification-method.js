@@ -34,4 +34,3 @@ export const OrdersCardVerificationMethod = {
     AvsCvv: "AVS_CVV",
 };
 export const ordersCardVerificationMethodSchema = s.enumOf(OrdersCardVerificationMethod);
-//# sourceMappingURL=orders-card-verification-method.js.map

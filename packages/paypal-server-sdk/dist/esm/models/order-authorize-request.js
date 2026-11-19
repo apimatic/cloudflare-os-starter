@@ -11,4 +11,3 @@ export const orderAuthorizeRequestSchema = s.lazySchema(() => s.object({
     ...orderAuthorizeRequestProperties,
     paymentSource: s.optional(s.lazy(() => orderAuthorizeRequestPaymentSourceSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-authorize-request.js.map

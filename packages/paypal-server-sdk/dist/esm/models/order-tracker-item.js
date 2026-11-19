@@ -23,4 +23,3 @@ export const orderTrackerItemSchema = s.lazySchema(() => s.object({
         .check(s.minLength(1), s.maxLength(2048), s.pattern("^(https:)([/|.|\\w|\\s|-])*\\.(?:jpg|gif|png|jpeg|JPG|GIF|PNG|JPEG)"), s.url())),
     upc: s.optional(s.lazy(() => universalProductCodeSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-tracker-item.js.map

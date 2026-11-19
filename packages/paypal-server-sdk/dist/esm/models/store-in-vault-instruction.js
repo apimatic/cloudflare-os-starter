@@ -8,4 +8,3 @@ export const StoreInVaultInstruction = {
     OnSuccess: "ON_SUCCESS",
 };
 export const storeInVaultInstructionSchema = s.enumOf(StoreInVaultInstruction);
-//# sourceMappingURL=store-in-vault-instruction.js.map

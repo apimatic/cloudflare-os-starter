@@ -38,4 +38,3 @@ export const subscriptionBillingInformationSchema = s.lazySchema(() => s.object(
     failedPaymentsCount: s.int().check(s.gte(0), s.lte(999)),
     lastFailedPayment: s.optional(s.lazy(() => failedPaymentDetailsSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-billing-information.js.map

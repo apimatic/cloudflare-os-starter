@@ -22,4 +22,3 @@ export const payPalWalletVaultInstructionSchema = s.lazySchema(() => s.object({
     ...payPalWalletVaultInstructionProperties,
     description: s.optional(s.string().check(s.minLength(1), s.maxLength(128))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-vault-instruction.js.map

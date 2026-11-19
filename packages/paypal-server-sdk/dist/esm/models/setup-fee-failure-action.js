@@ -7,4 +7,3 @@ export const SetupFeeFailureAction = {
     Cancel: "CANCEL",
 };
 export const setupFeeFailureActionSchema = s.enumOf(SetupFeeFailureAction);
-//# sourceMappingURL=setup-fee-failure-action.js.map

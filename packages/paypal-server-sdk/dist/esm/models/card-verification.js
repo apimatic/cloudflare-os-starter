@@ -3,4 +3,3 @@ import { OrdersCardVerificationMethod, ordersCardVerificationMethodSchema, } fro
 export const cardVerificationSchema = s.object({
     method: s.defaulted(ordersCardVerificationMethodSchema, OrdersCardVerificationMethod.ScaWhenRequired),
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=card-verification.js.map

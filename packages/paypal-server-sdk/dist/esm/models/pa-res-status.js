@@ -19,4 +19,3 @@ export const PaResStatus = {
     I: "I",
 };
 export const paResStatusSchema = s.enumOf(PaResStatus);
-//# sourceMappingURL=pa-res-status.js.map

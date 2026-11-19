@@ -148,4 +148,3 @@ export class TransactionSearch {
         page: s.defaulted(s.int().check(s.gte(1), s.lte(2147483647)), 1),
     }));
 })(TransactionSearch || (TransactionSearch = {}));
-//# sourceMappingURL=transaction-search.js.map

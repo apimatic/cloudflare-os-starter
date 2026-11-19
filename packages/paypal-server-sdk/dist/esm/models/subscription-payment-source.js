@@ -10,4 +10,3 @@ export const subscriptionPaymentSourceSchema = s.lazySchema(() => s.object({
     ...subscriptionPaymentSourceProperties,
     card: s.optional(s.lazy(() => subscriptionCardRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-payment-source.js.map

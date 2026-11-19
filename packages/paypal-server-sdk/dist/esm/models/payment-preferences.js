@@ -19,4 +19,3 @@ export const paymentPreferencesSchema = s.lazySchema(() => s.object({
     setupFee: s.optional(s.lazy(() => moneySchema)),
     paymentFailureThreshold: s.defaulted(s.int().check(s.gte(0), s.lte(999)), 0),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-preferences.js.map

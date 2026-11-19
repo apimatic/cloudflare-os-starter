@@ -110,4 +110,3 @@ function digestSchema(encoding) {
             return s.base64UrlBytes();
     }
 }
-//# sourceMappingURL=signature-verifier.js.map

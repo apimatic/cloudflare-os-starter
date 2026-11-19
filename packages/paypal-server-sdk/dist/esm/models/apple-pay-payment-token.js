@@ -8,4 +8,3 @@ export const applePayPaymentTokenSchema = s.lazySchema(() => s.object({
     ...applePayPaymentTokenProperties,
     card: s.optional(s.lazy(() => applePayCardSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-payment-token.js.map

@@ -82,4 +82,3 @@ export class PageableApiResult {
         }
     }
 }
-//# sourceMappingURL=pageable.js.map

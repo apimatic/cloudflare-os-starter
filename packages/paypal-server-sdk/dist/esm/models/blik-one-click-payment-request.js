@@ -21,4 +21,3 @@ export const blikOneClickPaymentRequestSchema = s.lazySchema(() => s.object({
     aliasLabel: s.optional(s.string().check(s.minLength(8), s.maxLength(35), s.pattern("^[ -~]{8,35}$"))),
     aliasKey: s.optional(s.string().check(s.minLength(1), s.maxLength(19), s.pattern("^[0-9]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=blik-one-click-payment-request.js.map

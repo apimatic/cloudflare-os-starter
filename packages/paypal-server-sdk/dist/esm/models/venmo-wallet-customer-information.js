@@ -22,4 +22,3 @@ export const venmoWalletCustomerInformationSchema = s.lazySchema(() => s.object(
     phone: s.optional(s.lazy(() => phoneWithTypeSchema)),
     name: s.optional(s.lazy(() => nameSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-customer-information.js.map

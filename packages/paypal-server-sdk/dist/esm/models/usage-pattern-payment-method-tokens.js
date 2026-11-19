@@ -54,4 +54,3 @@ export const UsagePatternPaymentMethodTokens = {
     InstallmentPrepaid: "INSTALLMENT_PREPAID",
 };
 export const usagePatternPaymentMethodTokensSchema = s.enumOf(UsagePatternPaymentMethodTokens);
-//# sourceMappingURL=usage-pattern-payment-method-tokens.js.map

@@ -12,4 +12,3 @@ export function readWebhookBody(request) {
     }
     return parsed;
 }
-//# sourceMappingURL=webhook-event-parser.js.map

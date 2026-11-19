@@ -22,4 +22,3 @@ export const paymentTokenResponsePaymentSourceSchema = s.lazySchema(() => s.obje
     venmo: s.optional(s.lazy(() => venmoPaymentTokenSchema)),
     applePay: s.optional(s.lazy(() => applePayPaymentTokenSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-token-response-payment-source.js.map

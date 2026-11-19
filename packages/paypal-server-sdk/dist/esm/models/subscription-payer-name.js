@@ -22,4 +22,3 @@ export const subscriptionPayerNameSchema = s.lazySchema(() => s.object({
     suffix: s.optional(s.string().check(s.maxLength(140))),
     fullName: s.optional(s.string().check(s.maxLength(300))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-payer-name.js.map

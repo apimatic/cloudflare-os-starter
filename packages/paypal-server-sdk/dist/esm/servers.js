@@ -34,4 +34,3 @@ function defaultServer(options) {
 function unknownEnvironment(environment) {
     throw new ConfigurationError(`Unknown server environment: ${String(environment)}`);
 }
-//# sourceMappingURL=servers.js.map

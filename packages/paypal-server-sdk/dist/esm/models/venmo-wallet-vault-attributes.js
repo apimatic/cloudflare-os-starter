@@ -25,4 +25,3 @@ export const venmoWalletVaultAttributesSchema = s.lazySchema(() => s.object({
     ...venmoWalletVaultAttributesProperties,
     description: s.optional(s.string().check(s.minLength(1), s.maxLength(128), s.pattern("^[a-zA-Z0-9_'\\-., :;\\!?\"]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-vault-attributes.js.map

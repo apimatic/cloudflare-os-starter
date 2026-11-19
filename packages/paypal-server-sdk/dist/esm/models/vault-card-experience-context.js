@@ -28,4 +28,3 @@ export const vaultCardExperienceContextSchema = s.lazySchema(() => s.object({
     returnUrl: s.optional(s.string().check(s.minLength(1), s.maxLength(4000), s.url())),
     cancelUrl: s.optional(s.string().check(s.minLength(1), s.maxLength(4000), s.url())),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-card-experience-context.js.map

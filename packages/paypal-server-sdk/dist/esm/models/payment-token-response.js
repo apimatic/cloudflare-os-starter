@@ -19,4 +19,3 @@ export const paymentTokenResponseSchema = s.lazySchema(() => s.object({
     paymentSource: s.optional(s.lazy(() => paymentTokenResponsePaymentSourceSchema)),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(32))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-token-response.js.map

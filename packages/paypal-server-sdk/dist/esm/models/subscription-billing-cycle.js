@@ -22,4 +22,3 @@ export const subscriptionBillingCycleSchema = s.lazySchema(() => s.object({
     sequence: s.int().check(s.gte(1), s.lte(99)),
     totalCycles: s.defaulted(s.int().check(s.gte(0), s.lte(999)), 1),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-billing-cycle.js.map

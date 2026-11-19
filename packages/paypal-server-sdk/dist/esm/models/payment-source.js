@@ -54,4 +54,3 @@ export const paymentSourceSchema = s.lazySchema(() => s.object({
     googlePay: s.optional(s.lazy(() => googlePayRequestSchema)),
     venmo: s.optional(s.lazy(() => venmoWalletRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-source.js.map

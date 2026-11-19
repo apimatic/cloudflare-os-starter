@@ -7,4 +7,3 @@ export const SubscriptionPricingModel = {
     Tiered: "TIERED",
 };
 export const subscriptionPricingModelSchema = s.enumOf(SubscriptionPricingModel);
-//# sourceMappingURL=subscription-pricing-model.js.map

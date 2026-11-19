@@ -25,4 +25,3 @@ export const p24PaymentObjectSchema = s.lazySchema(() => s.object({
     methodId: s.optional(s.string().check(s.minLength(1), s.maxLength(300))),
     methodDescription: s.optional(s.string().check(s.minLength(1), s.maxLength(2000))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=p24-payment-object.js.map

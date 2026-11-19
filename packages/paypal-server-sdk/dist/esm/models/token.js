@@ -11,4 +11,3 @@ export const tokenSchema = s.lazySchema(() => s.object({
     ...tokenProperties,
     id: s.string().check(s.minLength(1), s.maxLength(255), s.pattern("^[0-9a-zA-Z_-]+$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=token.js.map

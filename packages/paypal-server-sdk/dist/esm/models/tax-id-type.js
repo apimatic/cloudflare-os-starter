@@ -7,4 +7,3 @@ export const TaxIdType = {
     BrCnpj: "BR_CNPJ",
 };
 export const taxIdTypeSchema = s.enumOf(TaxIdType);
-//# sourceMappingURL=tax-id-type.js.map

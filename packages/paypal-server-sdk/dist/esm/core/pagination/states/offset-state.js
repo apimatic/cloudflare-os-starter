@@ -18,4 +18,3 @@ export function offsetState(config) {
         },
     };
 }
-//# sourceMappingURL=offset-state.js.map

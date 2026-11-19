@@ -28,4 +28,3 @@ export const level3CardProcessingDataSchema = s.lazySchema(() => s.object({
     shipsFromPostalCode: s.optional(s.string().check(s.minLength(1), s.maxLength(60), s.pattern("^[a-zA-Z0-9_'.-]*$"))),
     lineItems: s.optional(s.array(s.lazy(() => lineItemSchema)).check(s.minLength(1), s.maxLength(100))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=level3-card-processing-data.js.map

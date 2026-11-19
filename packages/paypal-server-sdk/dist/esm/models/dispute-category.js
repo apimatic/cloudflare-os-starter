@@ -7,4 +7,3 @@ export const DisputeCategory = {
     UnauthorizedTransaction: "UNAUTHORIZED_TRANSACTION",
 };
 export const disputeCategorySchema = s.enumOf(DisputeCategory);
-//# sourceMappingURL=dispute-category.js.map

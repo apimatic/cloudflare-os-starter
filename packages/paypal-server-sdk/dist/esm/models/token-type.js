@@ -8,4 +8,3 @@ export const TokenType = {
     BillingAgreement: "BILLING_AGREEMENT",
 };
 export const tokenTypeSchema = s.enumOf(TokenType);
-//# sourceMappingURL=token-type.js.map

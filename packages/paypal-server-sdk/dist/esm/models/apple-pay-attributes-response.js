@@ -10,4 +10,3 @@ export const applePayAttributesResponseSchema = s.lazySchema(() => s.object({
     ...applePayAttributesResponseProperties,
     vault: s.optional(s.lazy(() => vaultResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-attributes-response.js.map

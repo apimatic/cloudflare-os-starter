@@ -17,4 +17,3 @@ export function pageState(config) {
         },
     };
 }
-//# sourceMappingURL=page-state.js.map

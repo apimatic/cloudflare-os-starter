@@ -11,4 +11,3 @@ export const supplementaryDataSchema = s.lazySchema(() => s.object({
     card: s.optional(s.lazy(() => cardSupplementaryDataSchema)),
     risk: s.optional(s.lazy(() => riskSupplementaryDataSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=supplementary-data.js.map

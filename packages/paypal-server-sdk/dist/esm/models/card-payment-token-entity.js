@@ -40,4 +40,3 @@ export const cardPaymentTokenEntitySchema = s.lazySchema(() => s.object({
     authenticationResult: s.optional(s.lazy(() => cardAuthenticationResponseSchema)),
     binDetails: s.optional(s.lazy(() => binDetailsSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-payment-token-entity.js.map

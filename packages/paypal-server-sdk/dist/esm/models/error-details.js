@@ -13,4 +13,3 @@ export const errorDetailsSchema = s.lazySchema(() => s.object({
     ...errorDetailsProperties,
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(4))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=error-details.js.map

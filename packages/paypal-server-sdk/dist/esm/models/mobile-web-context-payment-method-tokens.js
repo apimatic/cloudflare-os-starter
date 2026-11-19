@@ -15,4 +15,3 @@ export const mobileWebContextPaymentMethodTokensSchema = s.lazySchema(() => s.ob
     ...mobileWebContextPaymentMethodTokensProperties,
     buyerUserAgent: s.optional(s.string().check(s.minLength(1), s.maxLength(512), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=mobile-web-context-payment-method-tokens.js.map

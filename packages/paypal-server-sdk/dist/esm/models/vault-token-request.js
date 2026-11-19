@@ -9,4 +9,3 @@ export const vaultTokenRequestSchema = s.lazySchema(() => s.object({
     ...vaultTokenRequestProperties,
     id: s.string().check(s.minLength(1), s.maxLength(255), s.pattern("^[0-9A-Za-z_-]+$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-token-request.js.map

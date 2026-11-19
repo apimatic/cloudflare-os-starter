@@ -13,4 +13,3 @@ export const cardAuthenticationResponseSchema = s.lazySchema(() => s.object({
     ...cardAuthenticationResponseProperties,
     threeDSecure: s.optional(s.lazy(() => threeDSecureCardAuthenticationResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-authentication-response.js.map

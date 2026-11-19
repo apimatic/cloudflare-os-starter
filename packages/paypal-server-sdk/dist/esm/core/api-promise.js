@@ -61,4 +61,3 @@ export function toApiResult(o) {
             payload: o.error.payload,
         };
 }
-//# sourceMappingURL=api-promise.js.map

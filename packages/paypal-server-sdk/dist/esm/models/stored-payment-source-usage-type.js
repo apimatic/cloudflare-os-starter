@@ -21,4 +21,3 @@ export const StoredPaymentSourceUsageType = {
     Derived: "DERIVED",
 };
 export const storedPaymentSourceUsageTypeSchema = s.enumOf(StoredPaymentSourceUsageType);
-//# sourceMappingURL=stored-payment-source-usage-type.js.map

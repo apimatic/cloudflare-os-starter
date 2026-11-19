@@ -15,4 +15,3 @@ export const applePayExperienceContextSchema = s.lazySchema(() => s.object({
     returnUrl: s.string().check(s.url()),
     cancelUrl: s.string().check(s.url()),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-experience-context.js.map

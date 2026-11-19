@@ -24,4 +24,3 @@ export const orderRequestSchema = s.lazySchema(() => s.object({
     paymentSource: s.optional(s.lazy(() => paymentSourceSchema)),
     applicationContext: s.optional(s.lazy(() => orderApplicationContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-request.js.map

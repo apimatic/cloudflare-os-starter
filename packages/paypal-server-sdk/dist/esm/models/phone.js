@@ -18,4 +18,3 @@ export const phoneSchema = s.lazySchema(() => s.object({
     nationalNumber: s.string().check(s.minLength(1), s.maxLength(14), s.pattern("^[0-9]{1,14}?$")),
     extensionNumber: s.optional(s.string().check(s.minLength(1), s.maxLength(15), s.pattern("^[0-9]{1,15}?$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=phone.js.map

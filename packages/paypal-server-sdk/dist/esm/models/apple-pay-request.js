@@ -38,4 +38,3 @@ export const applePayRequestSchema = s.lazySchema(() => s.object({
     attributes: s.optional(s.lazy(() => applePayAttributesSchema)),
     experienceContext: s.optional(s.lazy(() => applePayExperienceContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-request.js.map

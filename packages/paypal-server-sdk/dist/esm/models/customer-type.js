@@ -10,4 +10,3 @@ export const CustomerType = {
     Business: "BUSINESS",
 };
 export const customerTypeSchema = s.enumOf(CustomerType);
-//# sourceMappingURL=customer-type.js.map

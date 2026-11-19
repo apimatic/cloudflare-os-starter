@@ -26,4 +26,3 @@ export const orderConfirmApplicationContextSchema = s.lazySchema(() => s.object(
     cancelUrl: s.optional(s.string().check(s.minLength(10), s.maxLength(4000), s.url())),
     storedPaymentSource: s.optional(s.lazy(() => storedPaymentSourceSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-confirm-application-context.js.map

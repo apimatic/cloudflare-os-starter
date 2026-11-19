@@ -14,4 +14,3 @@ export const subscriptionsCardAttributesSchema = s.lazySchema(() => s.object({
     ...subscriptionsCardAttributesProperties,
     customer: s.optional(s.lazy(() => cardCustomerSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscriptions-card-attributes.js.map

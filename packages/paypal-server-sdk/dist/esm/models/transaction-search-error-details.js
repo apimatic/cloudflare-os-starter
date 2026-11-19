@@ -6,4 +6,3 @@ export const transactionSearchErrorDetailsSchema = s.object({
     issue: s.string(),
     description: s.optional(s.string()),
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=transaction-search-error-details.js.map

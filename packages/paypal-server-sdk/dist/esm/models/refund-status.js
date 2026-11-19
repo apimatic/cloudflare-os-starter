@@ -11,4 +11,3 @@ export const RefundStatus = {
     Completed: "COMPLETED",
 };
 export const refundStatusSchema = s.enumOf(RefundStatus);
-//# sourceMappingURL=refund-status.js.map

@@ -2835,4 +2835,3 @@ export const ShipmentCarrier = {
     Other: "OTHER",
 };
 export const shipmentCarrierSchema = s.enumOf(ShipmentCarrier);
-//# sourceMappingURL=shipment-carrier.js.map

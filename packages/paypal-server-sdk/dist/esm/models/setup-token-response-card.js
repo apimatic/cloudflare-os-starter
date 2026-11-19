@@ -40,4 +40,3 @@ export const setupTokenResponseCardSchema = s.lazySchema(() => s.object({
     authenticationResult: s.optional(s.lazy(() => cardAuthenticationResponseSchema)),
     binDetails: s.optional(s.lazy(() => binDetailsSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=setup-token-response-card.js.map

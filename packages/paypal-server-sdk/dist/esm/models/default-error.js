@@ -13,4 +13,3 @@ export const defaultErrorSchema = s.object({
         informationLink: "information_link",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=default-error.js.map

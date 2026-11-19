@@ -8,4 +8,3 @@ export const authorizationStatusWithDetailsSchema = s.object({
         statusDetails: "status_details",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=authorization-status-with-details.js.map

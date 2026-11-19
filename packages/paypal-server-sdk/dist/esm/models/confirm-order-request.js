@@ -15,4 +15,3 @@ export const confirmOrderRequestSchema = s.lazySchema(() => s.object({
     paymentSource: paymentSourceSchema,
     applicationContext: s.optional(s.lazy(() => orderConfirmApplicationContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=confirm-order-request.js.map

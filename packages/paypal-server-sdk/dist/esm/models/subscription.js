@@ -60,4 +60,3 @@ export const subscriptionSchema = s.lazySchema(() => s.object({
     customId: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern("^[\\x20-\\x7E]+"))),
     plan: s.optional(s.lazy(() => planDetailsSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription.js.map

@@ -14,4 +14,3 @@ export const nameSchema = s.lazySchema(() => s.object({
     givenName: s.optional(s.string().check(s.maxLength(140))),
     surname: s.optional(s.string().check(s.maxLength(140))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=name.js.map

@@ -3,4 +3,3 @@ import { SubscriptionCardVerificationMethod, subscriptionCardVerificationMethodS
 export const cardVerificationSubscriptionsSchema = s.object({
     method: s.defaulted(subscriptionCardVerificationMethodSchema, SubscriptionCardVerificationMethod.ScaWhenRequired),
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=card-verification-subscriptions.js.map

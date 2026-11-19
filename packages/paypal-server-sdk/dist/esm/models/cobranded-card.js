@@ -13,4 +13,3 @@ export const cobrandedCardSchema = s.lazySchema(() => s.object({
     payee: s.optional(s.lazy(() => payeeBaseSchema)),
     amount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=cobranded-card.js.map

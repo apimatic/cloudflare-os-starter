@@ -16,4 +16,3 @@ export const giropayPaymentRequestSchema = s.lazySchema(() => s.object({
     countryCode: s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$")),
     experienceContext: s.optional(s.lazy(() => experienceContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=giropay-payment-request.js.map

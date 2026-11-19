@@ -13,4 +13,3 @@ export const nativeAppContextSchema = s.lazySchema(() => s.object({
     ...nativeAppContextProperties,
     osVersion: s.optional(s.string().check(s.minLength(1), s.maxLength(64), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=native-app-context.js.map

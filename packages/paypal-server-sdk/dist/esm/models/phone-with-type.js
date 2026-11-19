@@ -14,4 +14,3 @@ export const phoneWithTypeSchema = s.lazySchema(() => s.object({
     ...phoneWithTypeProperties,
     phoneNumber: phoneNumberSchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=phone-with-type.js.map

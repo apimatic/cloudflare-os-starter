@@ -14,4 +14,3 @@ export const vaultResponseCustomerSchema = s.lazySchema(() => s.object({
     merchantCustomerId: s.optional(s.string().check(s.minLength(1), s.maxLength(64), s.pattern("^[0-9a-zA-Z-_.^*$@#]+$"))),
     links: s.optional(s.array(s.record(s.string(), s.unknown())).check(s.maxLength(16))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-response-customer.js.map

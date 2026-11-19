@@ -53,4 +53,3 @@ export const PatchOp = {
     Test: "test",
 };
 export const patchOpSchema = s.enumOf(PatchOp);
-//# sourceMappingURL=patch-op.js.map

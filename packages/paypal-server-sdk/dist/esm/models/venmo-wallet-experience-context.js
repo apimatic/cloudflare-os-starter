@@ -22,4 +22,3 @@ export const venmoWalletExperienceContextSchema = s.lazySchema(() => s.object({
     brandName: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern("^.*$"))),
     orderUpdateCallbackConfig: s.optional(s.lazy(() => callbackConfigurationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-experience-context.js.map

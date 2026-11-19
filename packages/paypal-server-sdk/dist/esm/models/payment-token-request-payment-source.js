@@ -13,4 +13,3 @@ export const paymentTokenRequestPaymentSourceSchema = s.lazySchema(() => s.objec
     card: s.optional(s.lazy(() => paymentTokenRequestCardSchema)),
     token: s.optional(s.lazy(() => vaultTokenRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-token-request-payment-source.js.map

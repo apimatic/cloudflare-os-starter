@@ -19,4 +19,3 @@ export const transactionsListSchema = s.lazySchema(() => s.object({
     totalPages: s.optional(s.int().check(s.gte(0), s.lte(100000000))),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(10))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=transactions-list.js.map

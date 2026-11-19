@@ -16,4 +16,3 @@ export const pricingSchemeSchema = s.lazySchema(() => s.object({
     price: s.optional(s.lazy(() => moneySchema)),
     reloadThresholdAmount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pricing-scheme.js.map

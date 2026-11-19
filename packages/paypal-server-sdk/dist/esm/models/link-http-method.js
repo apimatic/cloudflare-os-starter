@@ -19,4 +19,3 @@ export const LinkHttpMethod = {
     Patch: "PATCH",
 };
 export const linkHttpMethodSchema = s.enumOf(LinkHttpMethod);
-//# sourceMappingURL=link-http-method.js.map

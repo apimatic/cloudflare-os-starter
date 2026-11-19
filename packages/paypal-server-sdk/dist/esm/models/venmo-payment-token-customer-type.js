@@ -10,4 +10,3 @@ export const VenmoPaymentTokenCustomerType = {
     Business: "BUSINESS",
 };
 export const venmoPaymentTokenCustomerTypeSchema = s.enumOf(VenmoPaymentTokenCustomerType);
-//# sourceMappingURL=venmo-payment-token-customer-type.js.map

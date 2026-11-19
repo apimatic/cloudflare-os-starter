@@ -62,4 +62,3 @@ function expiryOf(token) {
     const lifetimeMs = token.expiresIn * 1000;
     return Date.now() + Math.max(lifetimeMs - EXPIRY_BUFFER_MS, lifetimeMs / 2);
 }
-//# sourceMappingURL=oauth2-schemes.js.map

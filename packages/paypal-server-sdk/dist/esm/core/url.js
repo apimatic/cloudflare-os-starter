@@ -104,4 +104,3 @@ function joinUrl(base, path) {
     const right = path.replace(/^\/+/, "");
     return `${left}/${right}`;
 }
-//# sourceMappingURL=url.js.map

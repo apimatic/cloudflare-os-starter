@@ -17,4 +17,3 @@ export const googlePayRequestCardSchema = s.lazySchema(() => s.object({
     name: s.optional(s.string().check(s.minLength(1), s.maxLength(300), s.pattern("^.{1,300}$"))),
     billingAddress: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=google-pay-request-card.js.map

@@ -10,4 +10,3 @@ export const phoneNumberSubscriptionsSchema = s.lazySchema(() => s.object({
     ...phoneNumberSubscriptionsProperties,
     nationalNumber: s.string().check(s.minLength(1), s.maxLength(14), s.pattern("^[0-9]{1,14}?$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=phone-number-subscriptions.js.map

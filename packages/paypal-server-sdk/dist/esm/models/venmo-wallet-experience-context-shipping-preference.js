@@ -12,4 +12,3 @@ export const VenmoWalletExperienceContextShippingPreference = {
     SetProvidedAddress: "SET_PROVIDED_ADDRESS",
 };
 export const venmoWalletExperienceContextShippingPreferenceSchema = s.enumOf(VenmoWalletExperienceContextShippingPreference);
-//# sourceMappingURL=venmo-wallet-experience-context-shipping-preference.js.map

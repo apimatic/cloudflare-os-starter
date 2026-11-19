@@ -5,4 +5,3 @@ export const GooglePayPaymentMethod = {
     Card: "CARD",
 };
 export const googlePayPaymentMethodSchema = s.enumOf(GooglePayPaymentMethod);
-//# sourceMappingURL=google-pay-payment-method.js.map

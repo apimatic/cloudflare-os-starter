@@ -19,4 +19,3 @@ export const ReasonCode = {
     CurrencyMismatch: "CURRENCY_MISMATCH",
 };
 export const reasonCodeSchema = s.enumOf(ReasonCode);
-//# sourceMappingURL=reason-code.js.map

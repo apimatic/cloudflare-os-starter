@@ -20,4 +20,3 @@ export const OrderApplicationContextUserAction = {
     PayNow: "PAY_NOW",
 };
 export const orderApplicationContextUserActionSchema = s.enumOf(OrderApplicationContextUserAction);
-//# sourceMappingURL=order-application-context-user-action.js.map

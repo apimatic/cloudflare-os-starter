@@ -17,4 +17,3 @@ export const shippingInformationSchema = s.lazySchema(() => s.object({
     address: s.optional(s.lazy(() => simplePostalAddressCoarseGrainedSchema)),
     secondaryShippingAddress: s.optional(s.lazy(() => simplePostalAddressCoarseGrainedSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=shipping-information.js.map

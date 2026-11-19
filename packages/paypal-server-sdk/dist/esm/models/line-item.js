@@ -49,4 +49,3 @@ export const lineItemSchema = s.lazySchema(() => s.object({
     totalAmount: s.optional(s.lazy(() => moneySchema)),
     unitOfMeasure: s.optional(s.string().check(s.minLength(1), s.maxLength(12), s.pattern("^[a-zA-Z0-9_'.-]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=line-item.js.map

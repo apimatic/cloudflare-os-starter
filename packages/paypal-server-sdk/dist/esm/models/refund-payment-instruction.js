@@ -11,4 +11,3 @@ export const refundPaymentInstructionSchema = s.lazySchema(() => s.object({
     ...refundPaymentInstructionProperties,
     platformFees: s.optional(s.array(s.lazy(() => refundPlatformFeeSchema)).check(s.minLength(0), s.maxLength(1))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=refund-payment-instruction.js.map

@@ -18,4 +18,3 @@ export const OrderApplicationContextShippingPreference = {
     SetProvidedAddress: "SET_PROVIDED_ADDRESS",
 };
 export const orderApplicationContextShippingPreferenceSchema = s.enumOf(OrderApplicationContextShippingPreference);
-//# sourceMappingURL=order-application-context-shipping-preference.js.map

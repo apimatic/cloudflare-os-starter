@@ -7,4 +7,3 @@ export const patchSchema = s.object({
     value: s.optional(s.json()),
     from: s.optional(s.string()),
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=patch.js.map

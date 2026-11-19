@@ -8,4 +8,3 @@ export const cardAttributesResponseSchema = s.lazySchema(() => s.object({
     ...cardAttributesResponseProperties,
     vault: s.optional(s.lazy(() => cardVaultResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-attributes-response.js.map

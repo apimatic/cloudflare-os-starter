@@ -19,4 +19,3 @@ export const planSchema = s.lazySchema(() => s.object({
     oneTimeCharges: oneTimeChargeSchema,
     name: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern("^[A-Za-z0-9() +',.:-]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=plan.js.map

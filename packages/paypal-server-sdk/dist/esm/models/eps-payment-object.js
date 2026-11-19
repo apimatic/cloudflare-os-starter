@@ -16,4 +16,3 @@ export const epsPaymentObjectSchema = s.lazySchema(() => s.object({
         .string()
         .check(s.minLength(8), s.maxLength(11), s.pattern("^[A-Z-a-z0-9]{4}[A-Z-a-z]{2}[A-Z-a-z0-9]{2}([A-Z-a-z0-9]{3})?$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=eps-payment-object.js.map

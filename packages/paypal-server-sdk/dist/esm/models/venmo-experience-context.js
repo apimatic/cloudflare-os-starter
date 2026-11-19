@@ -19,4 +19,3 @@ export const venmoExperienceContextSchema = s.lazySchema(() => s.object({
     ...venmoExperienceContextProperties,
     brandName: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-experience-context.js.map

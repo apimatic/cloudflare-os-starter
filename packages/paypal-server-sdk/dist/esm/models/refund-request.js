@@ -23,4 +23,3 @@ export const refundRequestSchema = s.lazySchema(() => s.object({
     noteToPayer: s.optional(s.string().check(s.minLength(1), s.maxLength(255), s.pattern("^.*$"))),
     paymentInstruction: s.optional(s.lazy(() => refundPaymentInstructionSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=refund-request.js.map

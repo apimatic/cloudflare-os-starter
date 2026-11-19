@@ -19,4 +19,3 @@ export const binDetailsSchema = s.lazySchema(() => s.object({
     binCountryCode: s.optional(s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$"))),
     products: s.optional(s.array(s.string().check(s.minLength(1), s.maxLength(255))).check(s.minLength(1), s.maxLength(256))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=bin-details.js.map

@@ -9,4 +9,3 @@ export const SubscriptionPlanStatus = {
     Active: "ACTIVE",
 };
 export const subscriptionPlanStatusSchema = s.enumOf(SubscriptionPlanStatus);
-//# sourceMappingURL=subscription-plan-status.js.map

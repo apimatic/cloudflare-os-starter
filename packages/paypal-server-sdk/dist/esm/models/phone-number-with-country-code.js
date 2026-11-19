@@ -15,4 +15,3 @@ export const phoneNumberWithCountryCodeSchema = s.lazySchema(() => s.object({
     countryCode: s.string().check(s.minLength(1), s.maxLength(3), s.pattern("^[0-9]{1,3}?$")),
     nationalNumber: s.string().check(s.minLength(1), s.maxLength(14), s.pattern("^[0-9]{1,14}?$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=phone-number-with-country-code.js.map

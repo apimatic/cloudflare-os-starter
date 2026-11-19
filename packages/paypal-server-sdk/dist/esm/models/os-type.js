@@ -9,4 +9,3 @@ export const OsType = {
     Other: "OTHER",
 };
 export const osTypeSchema = s.enumOf(OsType);
-//# sourceMappingURL=os-type.js.map

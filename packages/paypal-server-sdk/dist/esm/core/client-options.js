@@ -25,4 +25,3 @@ export function buildCoreClientOptions(options, loggingEnvironmentVariable) {
         fetch: fetchImpl,
     };
 }
-//# sourceMappingURL=client-options.js.map

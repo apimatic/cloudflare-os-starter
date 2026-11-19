@@ -22,4 +22,3 @@ export const bancontactPaymentObjectSchema = s.lazySchema(() => s.object({
     ibanLastChars: s.optional(s.string().check(s.minLength(4), s.maxLength(34), s.pattern("[a-zA-Z0-9]{4}"))),
     cardLastDigits: s.optional(s.string().check(s.minLength(4), s.maxLength(4), s.pattern("[0-9]{4}"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=bancontact-payment-object.js.map

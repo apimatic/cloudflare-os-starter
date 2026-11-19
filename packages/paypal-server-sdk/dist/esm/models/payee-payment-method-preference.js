@@ -11,4 +11,3 @@ export const PayeePaymentMethodPreference = {
     ImmediatePaymentRequired: "IMMEDIATE_PAYMENT_REQUIRED",
 };
 export const payeePaymentMethodPreferenceSchema = s.enumOf(PayeePaymentMethodPreference);
-//# sourceMappingURL=payee-payment-method-preference.js.map

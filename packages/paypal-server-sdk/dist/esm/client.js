@@ -85,4 +85,3 @@ export class PayPalServerSdkClient {
         return (this.#subscriptions ??= new Subscriptions(this.#rawClient, this.#servers, this.#auth));
     }
 }
-//# sourceMappingURL=client.js.map

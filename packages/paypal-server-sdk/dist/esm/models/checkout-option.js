@@ -13,4 +13,3 @@ export const checkoutOptionSchema = s.lazySchema(() => s.object({
     checkoutOptionName: s.optional(s.string().check(s.minLength(1), s.maxLength(200), s.pattern("^[a-zA-Z0-9_'\\-., \":;\\!?]*$"))),
     checkoutOptionValue: s.optional(s.string().check(s.minLength(1), s.maxLength(200), s.pattern("^[a-zA-Z0-9_'\\-., \":;\\!?]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=checkout-option.js.map

@@ -16,4 +16,3 @@ export const PayPalWalletContextShippingPreference = {
     SetProvidedAddress: "SET_PROVIDED_ADDRESS",
 };
 export const payPalWalletContextShippingPreferenceSchema = s.enumOf(PayPalWalletContextShippingPreference);
-//# sourceMappingURL=pay-pal-wallet-context-shipping-preference.js.map

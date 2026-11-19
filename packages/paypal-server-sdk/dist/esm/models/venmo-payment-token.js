@@ -43,4 +43,3 @@ export const venmoPaymentTokenSchema = s.lazySchema(() => s.object({
     address: s.optional(s.lazy(() => address3Schema)),
     userName: s.optional(s.string().check(s.minLength(1), s.maxLength(50), s.pattern("^[-a-zA-Z0-9_]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-payment-token.js.map

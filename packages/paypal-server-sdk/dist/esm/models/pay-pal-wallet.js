@@ -46,4 +46,3 @@ export const payPalWalletSchema = s.lazySchema(() => s.object({
     experienceContext: s.optional(s.lazy(() => payPalWalletExperienceContextSchema)),
     billingAgreementId: s.optional(s.string().check(s.minLength(2), s.maxLength(128), s.pattern("^[a-zA-Z0-9-]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet.js.map

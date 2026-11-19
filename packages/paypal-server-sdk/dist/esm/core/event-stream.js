@@ -93,4 +93,3 @@ function pullStream(iterator) {
         },
     }, { highWaterMark: 0 });
 }
-//# sourceMappingURL=event-stream.js.map

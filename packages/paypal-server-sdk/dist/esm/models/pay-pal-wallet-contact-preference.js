@@ -20,4 +20,3 @@ export const PayPalWalletContactPreference = {
     RetainContactInfo: "RETAIN_CONTACT_INFO",
 };
 export const payPalWalletContactPreferenceSchema = s.enumOf(PayPalWalletContactPreference);
-//# sourceMappingURL=pay-pal-wallet-contact-preference.js.map

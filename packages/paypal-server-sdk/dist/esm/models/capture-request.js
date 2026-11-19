@@ -25,4 +25,3 @@ export const captureRequestSchema = s.lazySchema(() => s.object({
     noteToPayer: s.optional(s.string().check(s.maxLength(255))),
     softDescriptor: s.optional(s.string().check(s.maxLength(22))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=capture-request.js.map

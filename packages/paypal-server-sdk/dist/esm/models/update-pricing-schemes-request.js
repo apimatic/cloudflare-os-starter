@@ -13,4 +13,3 @@ export const updatePricingSchemesRequestSchema = s.lazySchema(() => s.object({
     ...updatePricingSchemesRequestProperties,
     pricingSchemes: s.array(s.lazy(() => updatePricingSchemeSchema)).check(s.minLength(1), s.maxLength(99)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=update-pricing-schemes-request.js.map

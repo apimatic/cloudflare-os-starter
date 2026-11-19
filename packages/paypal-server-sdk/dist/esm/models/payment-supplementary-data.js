@@ -11,4 +11,3 @@ export const paymentSupplementaryDataSchema = s.lazySchema(() => s.object({
     ...paymentSupplementaryDataProperties,
     relatedIds: s.optional(s.lazy(() => relatedIdentifiersSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-supplementary-data.js.map

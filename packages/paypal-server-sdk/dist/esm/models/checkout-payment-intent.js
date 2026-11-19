@@ -17,4 +17,3 @@ export const CheckoutPaymentIntent = {
     Authorize: "AUTHORIZE",
 };
 export const checkoutPaymentIntentSchema = s.enumOf(CheckoutPaymentIntent);
-//# sourceMappingURL=checkout-payment-intent.js.map

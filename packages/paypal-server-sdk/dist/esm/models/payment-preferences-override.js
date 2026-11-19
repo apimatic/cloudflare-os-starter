@@ -21,4 +21,3 @@ export const paymentPreferencesOverrideSchema = s.lazySchema(() => s.object({
     setupFee: s.optional(s.lazy(() => moneySchema)),
     paymentFailureThreshold: s.optional(s.int().check(s.gte(0), s.lte(999))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-preferences-override.js.map

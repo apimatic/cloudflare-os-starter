@@ -13,4 +13,3 @@ export const CardType = {
     Unknown: "UNKNOWN",
 };
 export const cardTypeSchema = s.enumOf(CardType);
-//# sourceMappingURL=card-type.js.map

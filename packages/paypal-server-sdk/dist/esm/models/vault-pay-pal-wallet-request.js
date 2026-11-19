@@ -31,4 +31,3 @@ export const vaultPayPalWalletRequestSchema = s.lazySchema(() => s.object({
     billingPlan: s.optional(s.lazy(() => planSchema)),
     experienceContext: s.optional(s.lazy(() => vaultExperienceContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-pay-pal-wallet-request.js.map

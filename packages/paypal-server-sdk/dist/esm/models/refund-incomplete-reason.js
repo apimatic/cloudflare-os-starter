@@ -5,4 +5,3 @@ export const RefundIncompleteReason = {
     Echeck: "ECHECK",
 };
 export const refundIncompleteReasonSchema = s.enumOf(RefundIncompleteReason);
-//# sourceMappingURL=refund-incomplete-reason.js.map

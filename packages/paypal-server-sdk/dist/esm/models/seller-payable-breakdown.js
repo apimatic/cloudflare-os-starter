@@ -34,4 +34,3 @@ export const sellerPayableBreakdownSchema = s.lazySchema(() => s.object({
     netAmountBreakdown: s.optional(s.array(s.lazy(() => netAmountBreakdownItemSchema))),
     totalRefundedAmount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=seller-payable-breakdown.js.map

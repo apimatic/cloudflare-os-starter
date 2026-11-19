@@ -19,4 +19,3 @@ export const PaymentTokenStatus = {
     Tokenized: "TOKENIZED",
 };
 export const paymentTokenStatusSchema = s.enumOf(PaymentTokenStatus);
-//# sourceMappingURL=payment-token-status.js.map

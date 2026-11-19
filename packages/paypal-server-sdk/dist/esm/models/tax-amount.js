@@ -13,4 +13,3 @@ export const taxAmountSchema = s.lazySchema(() => s.object({
     ...taxAmountProperties,
     taxAmount: s.optional(s.lazy(() => moneyTransactionSearchSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=tax-amount.js.map

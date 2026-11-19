@@ -18,4 +18,3 @@ export const netAmountBreakdownItemSchema = s.lazySchema(() => s.object({
     convertedAmount: s.optional(s.lazy(() => moneySchema)),
     exchangeRate: s.optional(s.lazy(() => exchangeRateSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=net-amount-breakdown-item.js.map

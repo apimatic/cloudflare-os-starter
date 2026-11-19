@@ -32,4 +32,3 @@ export const OrderStatus = {
     PayerActionRequired: "PAYER_ACTION_REQUIRED",
 };
 export const orderStatusSchema = s.enumOf(OrderStatus);
-//# sourceMappingURL=order-status.js.map

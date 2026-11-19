@@ -17,4 +17,3 @@ export const payPalWalletVaultResponseSchema = s.lazySchema(() => s.object({
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(10))),
     customer: s.optional(s.lazy(() => payPalWalletCustomerSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-vault-response.js.map

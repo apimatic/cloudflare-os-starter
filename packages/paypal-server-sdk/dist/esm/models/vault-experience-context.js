@@ -33,4 +33,3 @@ export const vaultExperienceContextSchema = s.lazySchema(() => s.object({
     cancelUrl: s.optional(s.string().check(s.minLength(1), s.maxLength(4000), s.url())),
     appSwitchContext: s.optional(s.lazy(() => appSwitchContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-experience-context.js.map

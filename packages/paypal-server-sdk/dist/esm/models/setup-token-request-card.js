@@ -29,4 +29,3 @@ export const setupTokenRequestCardSchema = s.lazySchema(() => s.object({
     billingAddress: s.optional(s.lazy(() => addressSchema)),
     experienceContext: s.optional(s.lazy(() => vaultCardExperienceContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=setup-token-request-card.js.map

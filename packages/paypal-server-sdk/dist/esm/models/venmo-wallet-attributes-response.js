@@ -10,4 +10,3 @@ export const venmoWalletAttributesResponseSchema = s.lazySchema(() => s.object({
     ...venmoWalletAttributesResponseProperties,
     vault: s.optional(s.lazy(() => venmoVaultResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-attributes-response.js.map

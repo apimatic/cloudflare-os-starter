@@ -9,4 +9,3 @@ export const authenticationResponseSchema = s.object({
         threeDSecure: "three_d_secure",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=authentication-response.js.map

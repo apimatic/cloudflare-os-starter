@@ -25,4 +25,3 @@ export const payPalWalletCustomerRequestSchema = s.lazySchema(() => s.object({
     name: s.optional(s.lazy(() => nameSchema)),
     merchantCustomerId: s.optional(s.string().check(s.minLength(1), s.maxLength(64), s.pattern("^[0-9a-zA-Z-_.^*$@#]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-customer-request.js.map

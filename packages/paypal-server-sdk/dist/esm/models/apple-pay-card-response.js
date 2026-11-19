@@ -46,4 +46,3 @@ export const applePayCardResponseSchema = s.lazySchema(() => s.object({
     billingAddress: s.optional(s.lazy(() => addressSchema)),
     countryCode: s.optional(s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-card-response.js.map

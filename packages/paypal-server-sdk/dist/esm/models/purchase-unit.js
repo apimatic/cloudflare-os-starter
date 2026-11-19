@@ -49,4 +49,3 @@ export const purchaseUnitSchema = s.lazySchema(() => s.object({
     payments: s.optional(s.lazy(() => paymentCollectionSchema)),
     mostRecentErrors: s.optional(s.array(s.record(s.string(), s.unknown())).check(s.minLength(1), s.maxLength(10))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=purchase-unit.js.map

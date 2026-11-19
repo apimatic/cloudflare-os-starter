@@ -24,4 +24,3 @@ export const billingCycleSchema = s.lazySchema(() => s.object({
         .string()
         .check(s.minLength(10), s.maxLength(10), s.pattern("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=billing-cycle.js.map

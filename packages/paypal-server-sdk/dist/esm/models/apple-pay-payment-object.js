@@ -32,4 +32,3 @@ export const applePayPaymentObjectSchema = s.lazySchema(() => s.object({
     attributes: s.optional(s.lazy(() => applePayAttributesResponseSchema)),
     storedCredential: s.optional(s.lazy(() => cardStoredCredentialSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-payment-object.js.map

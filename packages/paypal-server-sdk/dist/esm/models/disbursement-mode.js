@@ -11,4 +11,3 @@ export const DisbursementMode = {
     Delayed: "DELAYED",
 };
 export const disbursementModeSchema = s.enumOf(DisbursementMode);
-//# sourceMappingURL=disbursement-mode.js.map

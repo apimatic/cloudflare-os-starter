@@ -16,4 +16,3 @@ export const cartInformationSchema = s.lazySchema(() => s.object({
     itemDetails: s.optional(s.array(s.lazy(() => itemDetailsSchema)).check(s.minLength(1), s.maxLength(32767))),
     paypalInvoiceId: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern("^[a-zA-Z0-9_'\\-., \":;\\!?]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=cart-information.js.map

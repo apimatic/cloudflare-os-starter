@@ -114,4 +114,3 @@ export const transactionInformationSchema = s.lazySchema(() => s.object({
     instrumentType: s.optional(s.string().check(s.minLength(1), s.maxLength(64))),
     instrumentSubType: s.optional(s.string().check(s.minLength(1), s.maxLength(64))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=transaction-information.js.map

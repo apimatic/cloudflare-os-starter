@@ -77,4 +77,3 @@ function mergeCookies(existing, cookies) {
     const merged = [...pairs].map(([name, value]) => `${name}=${value}`).join("; ");
     return merged === "" ? undefined : merged;
 }
-//# sourceMappingURL=headers.js.map

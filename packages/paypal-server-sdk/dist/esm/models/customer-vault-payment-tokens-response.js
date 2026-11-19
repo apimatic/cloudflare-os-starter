@@ -25,4 +25,3 @@ export const customerVaultPaymentTokensResponseSchema = s.lazySchema(() => s.obj
     paymentTokens: s.optional(s.array(s.lazy(() => paymentTokenResponseSchema)).check(s.minLength(0), s.maxLength(64))),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(32))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=customer-vault-payment-tokens-response.js.map

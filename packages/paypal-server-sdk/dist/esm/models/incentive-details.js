@@ -20,4 +20,3 @@ export const incentiveDetailsSchema = s.lazySchema(() => s.object({
     incentiveAmount: s.optional(s.lazy(() => moneyTransactionSearchSchema)),
     incentiveProgramCode: s.optional(s.string().check(s.minLength(1), s.maxLength(100), s.pattern("^[a-zA-Z0-9_'\\-., \":;\\!?]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=incentive-details.js.map

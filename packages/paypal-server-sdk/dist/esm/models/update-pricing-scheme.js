@@ -14,4 +14,3 @@ export const updatePricingSchemeSchema = s.lazySchema(() => s.object({
     billingCycleSequence: s.int().check(s.gte(1), s.lte(99)),
     pricingScheme: subscriptionPricingSchemeSchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=update-pricing-scheme.js.map

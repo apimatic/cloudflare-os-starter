@@ -11,4 +11,3 @@ export const VenmoPaymentTokenUsageType = {
     Platform: "PLATFORM",
 };
 export const venmoPaymentTokenUsageTypeSchema = s.enumOf(VenmoPaymentTokenUsageType);
-//# sourceMappingURL=venmo-payment-token-usage-type.js.map

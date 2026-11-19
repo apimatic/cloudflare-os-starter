@@ -15,4 +15,3 @@ export const cardVaultResponseSchema = s.lazySchema(() => s.object({
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(10))),
     customer: s.optional(s.lazy(() => cardCustomerInformationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-vault-response.js.map

@@ -45,4 +45,3 @@ export const payPalWalletExperienceContextSchema = s.lazySchema(() => s.object({
     appSwitchContext: s.optional(s.lazy(() => appSwitchContextSchema)),
     orderUpdateCallbackConfig: s.optional(s.lazy(() => callbackConfigurationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-experience-context.js.map

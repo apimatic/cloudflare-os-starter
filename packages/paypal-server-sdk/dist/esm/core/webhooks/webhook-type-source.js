@@ -10,4 +10,3 @@ export function resolveWebhookType(source, body, request) {
     }
     return value;
 }
-//# sourceMappingURL=webhook-type-source.js.map

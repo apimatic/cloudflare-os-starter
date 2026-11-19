@@ -8,4 +8,3 @@ export const sellerProtectionSchema = s.object({
         disputeCategories: "dispute_categories",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=seller-protection.js.map

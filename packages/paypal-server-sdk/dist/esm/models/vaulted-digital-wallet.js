@@ -23,4 +23,3 @@ export const vaultedDigitalWalletSchema = s.lazySchema(() => s.object({
     description: s.optional(s.string().check(s.minLength(1), s.maxLength(128), s.pattern("^.*$"))),
     shipping: s.optional(s.lazy(() => vaultedDigitalWalletShippingDetailsSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vaulted-digital-wallet.js.map

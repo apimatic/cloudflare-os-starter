@@ -15,4 +15,3 @@ export const googlePayExperienceContextSchema = s.lazySchema(() => s.object({
     returnUrl: s.string().check(s.url()),
     cancelUrl: s.string().check(s.url()),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=google-pay-experience-context.js.map

@@ -14,4 +14,3 @@ export function cursorState(config) {
         },
     };
 }
-//# sourceMappingURL=cursor-state.js.map

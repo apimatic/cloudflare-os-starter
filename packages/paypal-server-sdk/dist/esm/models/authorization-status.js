@@ -27,4 +27,3 @@ export const AuthorizationStatus = {
     Pending: "PENDING",
 };
 export const authorizationStatusSchema = s.enumOf(AuthorizationStatus);
-//# sourceMappingURL=authorization-status.js.map

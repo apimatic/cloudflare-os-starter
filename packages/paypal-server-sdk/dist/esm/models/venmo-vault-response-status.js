@@ -18,4 +18,3 @@ export const VenmoVaultResponseStatus = {
     Approved: "APPROVED",
 };
 export const venmoVaultResponseStatusSchema = s.enumOf(VenmoVaultResponseStatus);
-//# sourceMappingURL=venmo-vault-response-status.js.map

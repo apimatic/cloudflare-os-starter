@@ -6,4 +6,3 @@ export const vaultInstructionSchema = s.object({
         storeInVault: "store_in_vault",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=vault-instruction.js.map

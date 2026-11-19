@@ -9,4 +9,3 @@ export const cancelSubscriptionRequestSchema = s.lazySchema(() => s.object({
     ...cancelSubscriptionRequestProperties,
     reason: s.string().check(s.minLength(1), s.maxLength(128), s.pattern("^.*$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=cancel-subscription-request.js.map

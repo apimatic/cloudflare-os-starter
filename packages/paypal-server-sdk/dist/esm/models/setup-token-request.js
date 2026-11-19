@@ -14,4 +14,3 @@ export const setupTokenRequestSchema = s.lazySchema(() => s.object({
     customer: s.optional(s.lazy(() => customerSchema)),
     paymentSource: setupTokenRequestPaymentSourceSchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=setup-token-request.js.map

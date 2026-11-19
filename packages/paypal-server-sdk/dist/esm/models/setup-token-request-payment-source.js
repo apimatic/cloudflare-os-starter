@@ -28,4 +28,3 @@ export const setupTokenRequestPaymentSourceSchema = s.lazySchema(() => s.object(
     token: s.optional(s.lazy(() => vaultTokenRequestSchema)),
     bank: s.optional(s.lazy(() => bankRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=setup-token-request-payment-source.js.map

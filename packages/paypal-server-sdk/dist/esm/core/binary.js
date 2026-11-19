@@ -287,4 +287,3 @@ function percentDecode(value) {
     }
     return new Uint8Array(bytes);
 }
-//# sourceMappingURL=binary.js.map

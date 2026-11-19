@@ -10,4 +10,3 @@ export const PayPalPaymentTokenCustomerType = {
     Business: "BUSINESS",
 };
 export const payPalPaymentTokenCustomerTypeSchema = s.enumOf(PayPalPaymentTokenCustomerType);
-//# sourceMappingURL=pay-pal-payment-token-customer-type.js.map

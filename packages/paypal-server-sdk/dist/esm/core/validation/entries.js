@@ -123,4 +123,3 @@ function encodeBase16(value) {
         text += byte.toString(16).toUpperCase().padStart(2, "0");
     return text;
 }
-//# sourceMappingURL=entries.js.map

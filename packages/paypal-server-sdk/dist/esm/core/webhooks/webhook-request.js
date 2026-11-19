@@ -75,4 +75,3 @@ function toHeaderMap(headers) {
     }
     return map;
 }
-//# sourceMappingURL=webhook-request.js.map

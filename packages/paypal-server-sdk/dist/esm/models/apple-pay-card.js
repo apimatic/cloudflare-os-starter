@@ -20,4 +20,3 @@ export const applePayCardSchema = s.lazySchema(() => s.object({
     lastDigits: s.optional(s.string().check(s.minLength(2), s.maxLength(4), s.pattern("^[0-9]{2,4}$"))),
     billingAddress: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-card.js.map

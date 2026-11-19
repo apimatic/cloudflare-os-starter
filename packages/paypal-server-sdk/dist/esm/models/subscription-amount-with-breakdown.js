@@ -28,4 +28,3 @@ export const subscriptionAmountWithBreakdownSchema = s.lazySchema(() => s.object
     taxAmount: s.optional(s.lazy(() => moneySchema)),
     netAmount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-amount-with-breakdown.js.map

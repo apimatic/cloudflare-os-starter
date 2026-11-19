@@ -13,4 +13,3 @@ export const PhoneType = {
     Pager: "PAGER",
 };
 export const phoneTypeSchema = s.enumOf(PhoneType);
-//# sourceMappingURL=phone-type.js.map

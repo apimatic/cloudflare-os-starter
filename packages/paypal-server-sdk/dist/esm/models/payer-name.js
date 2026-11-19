@@ -27,4 +27,3 @@ export const payerNameSchema = s.lazySchema(() => s.object({
     alternateFullName: s.optional(s.string().check(s.maxLength(300))),
     fullName: s.optional(s.string().check(s.maxLength(300))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payer-name.js.map

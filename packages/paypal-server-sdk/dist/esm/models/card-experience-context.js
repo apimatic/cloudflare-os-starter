@@ -13,4 +13,3 @@ export const cardExperienceContextSchema = s.lazySchema(() => s.object({
     returnUrl: s.optional(s.string().check(s.url())),
     cancelUrl: s.optional(s.string().check(s.url())),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-experience-context.js.map

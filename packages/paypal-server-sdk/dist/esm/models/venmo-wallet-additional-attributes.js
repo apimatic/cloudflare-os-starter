@@ -13,4 +13,3 @@ export const venmoWalletAdditionalAttributesSchema = s.lazySchema(() => s.object
     customer: s.optional(s.lazy(() => venmoWalletCustomerInformationSchema)),
     vault: s.optional(s.lazy(() => venmoWalletVaultAttributesSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-additional-attributes.js.map

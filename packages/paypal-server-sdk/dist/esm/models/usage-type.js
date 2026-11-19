@@ -11,4 +11,3 @@ export const UsageType = {
     Platform: "PLATFORM",
 };
 export const usageTypeSchema = s.enumOf(UsageType);
-//# sourceMappingURL=usage-type.js.map

@@ -15,4 +15,3 @@ export const VenmoWalletExperienceContextUserAction = {
     PayNow: "PAY_NOW",
 };
 export const venmoWalletExperienceContextUserActionSchema = s.enumOf(VenmoWalletExperienceContextUserAction);
-//# sourceMappingURL=venmo-wallet-experience-context-user-action.js.map

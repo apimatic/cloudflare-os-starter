@@ -36,4 +36,3 @@ export const orderApplicationContextSchema = s.lazySchema(() => s.object({
     cancelUrl: s.optional(s.string().check(s.url())),
     storedPaymentSource: s.optional(s.lazy(() => storedPaymentSourceSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-application-context.js.map

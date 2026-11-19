@@ -16,4 +16,3 @@ export const payPalWalletAttributesResponseSchema = s.lazySchema(() => s.object(
     vault: s.optional(s.lazy(() => payPalWalletVaultResponseSchema)),
     cobrandedCards: s.optional(s.array(s.lazy(() => cobrandedCardSchema)).check(s.minLength(0), s.maxLength(25))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-attributes-response.js.map

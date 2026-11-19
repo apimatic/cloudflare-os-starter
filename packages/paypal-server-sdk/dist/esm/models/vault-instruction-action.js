@@ -7,4 +7,3 @@ export const VaultInstructionAction = {
     OnPayerApproval: "ON_PAYER_APPROVAL",
 };
 export const vaultInstructionActionSchema = s.enumOf(VaultInstructionAction);
-//# sourceMappingURL=vault-instruction-action.js.map

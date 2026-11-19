@@ -20,4 +20,3 @@ export const pricingTierSchema = s.lazySchema(() => s.object({
     endingQuantity: s.optional(s.string().check(s.minLength(1), s.maxLength(32), s.pattern("^([0-9]+|([0-9]+)?[.][0-9]+)$"))),
     amount: moneySchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pricing-tier.js.map

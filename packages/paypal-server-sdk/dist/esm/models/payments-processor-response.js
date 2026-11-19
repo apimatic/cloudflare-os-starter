@@ -15,4 +15,3 @@ export const paymentsProcessorResponseSchema = s.object({
         paymentAdviceCode: "payment_advice_code",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=payments-processor-response.js.map

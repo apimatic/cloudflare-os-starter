@@ -17,4 +17,3 @@ export const applePayPaymentDataSchema = s.lazySchema(() => s.object({
     emvData: s.optional(s.string().check(s.minLength(1), s.maxLength(2000), s.pattern("^.*$"))),
     pin: s.optional(s.string().check(s.minLength(1), s.maxLength(2000), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-payment-data.js.map

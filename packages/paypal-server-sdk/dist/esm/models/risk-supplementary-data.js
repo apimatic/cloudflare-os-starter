@@ -8,4 +8,3 @@ export const riskSupplementaryDataSchema = s.lazySchema(() => s.object({
     ...riskSupplementaryDataProperties,
     customer: s.optional(s.lazy(() => participantMetadataSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=risk-supplementary-data.js.map

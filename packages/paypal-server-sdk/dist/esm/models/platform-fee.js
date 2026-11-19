@@ -13,4 +13,3 @@ export const platformFeeSchema = s.lazySchema(() => s.object({
     amount: moneySchema,
     payee: s.optional(s.lazy(() => payeeBaseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=platform-fee.js.map

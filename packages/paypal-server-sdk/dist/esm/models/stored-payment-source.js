@@ -19,4 +19,3 @@ export const storedPaymentSourceSchema = s.lazySchema(() => s.object({
     ...storedPaymentSourceProperties,
     previousNetworkTransactionReference: s.optional(s.lazy(() => networkTransactionSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=stored-payment-source.js.map

@@ -29,4 +29,3 @@ export const modifySubscriptionResponseSchema = s.lazySchema(() => s.object({
     shippingAddress: s.optional(s.lazy(() => shippingDetailsSubscriptionsSchema)),
     plan: s.optional(s.lazy(() => planOverrideSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=modify-subscription-response.js.map

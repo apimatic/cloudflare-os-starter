@@ -16,4 +16,3 @@ export const relatedIdentifiersSchema = s.lazySchema(() => s.object({
     authorizationId: s.optional(s.string().check(s.minLength(1), s.maxLength(20), s.pattern("^[A-Z0-9]+$"))),
     captureId: s.optional(s.string().check(s.minLength(1), s.maxLength(20), s.pattern("^[A-Z0-9]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=related-identifiers.js.map

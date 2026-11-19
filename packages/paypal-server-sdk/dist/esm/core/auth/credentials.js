@@ -3,4 +3,3 @@ export const PkceMethod = {
     S256: "S256",
     Plain: "plain",
 };
-//# sourceMappingURL=credentials.js.map

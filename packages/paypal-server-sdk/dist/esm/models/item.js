@@ -39,4 +39,3 @@ export const itemSchema = s.lazySchema(() => s.object({
     upc: s.optional(s.lazy(() => universalProductCodeSchema)),
     billingPlan: s.optional(s.lazy(() => orderBillingPlanSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=item.js.map

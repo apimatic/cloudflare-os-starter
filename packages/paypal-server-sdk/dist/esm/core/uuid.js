@@ -27,4 +27,3 @@ function fillPseudoRandomBytes(bytes) {
     bytes[11] = (bytes[11] ?? 0) ^ (pseudoRandomCalls % 256);
 }
 const hex = (bytes) => Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
-//# sourceMappingURL=uuid.js.map

@@ -14,4 +14,3 @@ export const paymentCollectionSchema = s.lazySchema(() => s.object({
     captures: s.optional(s.array(s.lazy(() => ordersCaptureSchema))),
     refunds: s.optional(s.array(s.lazy(() => refundSchema))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-collection.js.map

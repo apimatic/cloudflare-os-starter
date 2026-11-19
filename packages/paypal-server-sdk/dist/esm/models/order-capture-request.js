@@ -11,4 +11,3 @@ export const orderCaptureRequestSchema = s.lazySchema(() => s.object({
     ...orderCaptureRequestProperties,
     paymentSource: s.optional(s.lazy(() => orderCaptureRequestPaymentSourceSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-capture-request.js.map

@@ -20,4 +20,3 @@ export const CaptureStatus = {
     Failed: "FAILED",
 };
 export const captureStatusSchema = s.enumOf(CaptureStatus);
-//# sourceMappingURL=capture-status.js.map

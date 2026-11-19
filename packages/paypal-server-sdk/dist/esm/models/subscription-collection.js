@@ -11,4 +11,3 @@ export const subscriptionCollectionSchema = s.lazySchema(() => s.object({
     subscriptions: s.optional(s.array(s.lazy(() => subscriptionSchema)).check(s.minLength(0), s.maxLength(32767))),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(10))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-collection.js.map

@@ -15,4 +15,3 @@ export const applePayRequestCardSchema = s.lazySchema(() => s.object({
     ...applePayRequestCardProperties,
     billingAddress: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-request-card.js.map

@@ -18,4 +18,3 @@ export const errorErrorSchema = s.lazySchema(() => s.object({
     ...errorErrorProperties,
     details: s.optional(s.array(s.lazy(() => errorDetailsSchema))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=error-error.js.map

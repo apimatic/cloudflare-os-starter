@@ -11,4 +11,3 @@ export const IntervalUnit = {
     Year: "YEAR",
 };
 export const intervalUnitSchema = s.enumOf(IntervalUnit);
-//# sourceMappingURL=interval-unit.js.map

@@ -28,4 +28,3 @@ export const blikPaymentRequestSchema = s.lazySchema(() => s.object({
     level0: s.optional(s.lazy(() => blikLevel0PaymentObjectSchema)),
     oneClick: s.optional(s.lazy(() => blikOneClickPaymentRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=blik-payment-request.js.map

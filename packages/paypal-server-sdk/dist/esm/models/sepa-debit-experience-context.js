@@ -19,4 +19,3 @@ export const sepaDebitExperienceContextSchema = s.lazySchema(() => s.object({
     returnUrl: s.string().check(s.url()),
     cancelUrl: s.string().check(s.url()),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=sepa-debit-experience-context.js.map

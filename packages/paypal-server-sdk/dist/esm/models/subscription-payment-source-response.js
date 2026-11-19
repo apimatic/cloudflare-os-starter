@@ -10,4 +10,3 @@ export const subscriptionPaymentSourceResponseSchema = s.lazySchema(() => s.obje
     ...subscriptionPaymentSourceResponseProperties,
     card: s.optional(s.lazy(() => cardResponseWithBillingAddressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-payment-source-response.js.map

@@ -13,4 +13,3 @@ export const merchantPreferencesSchema = s.lazySchema(() => s.object({
     returnUrl: s.optional(s.string().check(s.minLength(10), s.maxLength(4000), s.url())),
     cancelUrl: s.optional(s.string().check(s.minLength(10), s.maxLength(4000), s.url())),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=merchant-preferences.js.map

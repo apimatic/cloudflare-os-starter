@@ -18,4 +18,3 @@ export const simplePostalAddressCoarseGrainedSchema = s.lazySchema(() => s.objec
     ...simplePostalAddressCoarseGrainedProperties,
     countryCode: s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=simple-postal-address-coarse-grained.js.map

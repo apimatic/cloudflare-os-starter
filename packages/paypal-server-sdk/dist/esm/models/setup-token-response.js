@@ -21,4 +21,3 @@ export const setupTokenResponseSchema = s.lazySchema(() => s.object({
     paymentSource: s.optional(s.lazy(() => setupTokenResponsePaymentSourceSchema)),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(32))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=setup-token-response.js.map

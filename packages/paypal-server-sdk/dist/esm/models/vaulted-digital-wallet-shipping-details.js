@@ -26,4 +26,3 @@ export const vaultedDigitalWalletShippingDetailsSchema = s.lazySchema(() => s.ob
     phoneNumber: s.optional(s.lazy(() => shippingPhoneNumberSchema)),
     address: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vaulted-digital-wallet-shipping-details.js.map

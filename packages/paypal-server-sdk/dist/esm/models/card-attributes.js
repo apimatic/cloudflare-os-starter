@@ -12,4 +12,3 @@ export const cardAttributesSchema = s.lazySchema(() => s.object({
     ...cardAttributesProperties,
     customer: s.optional(s.lazy(() => cardCustomerInformationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-attributes.js.map

@@ -23,4 +23,3 @@ export const searchErrorErrorSchema = s.lazySchema(() => s.object({
     totalItems: s.optional(s.int().check(s.gte(0), s.lte(2147483647))),
     maximumItems: s.optional(s.int().check(s.gte(0), s.lte(2147483647))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=search-error-error.js.map

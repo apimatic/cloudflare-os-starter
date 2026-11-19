@@ -265,4 +265,3 @@ function built(schema) {
 function isSchema(entry) {
     return typeof entry.decode === "function";
 }
-//# sourceMappingURL=schema.js.map

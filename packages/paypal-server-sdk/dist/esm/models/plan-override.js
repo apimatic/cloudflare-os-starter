@@ -18,4 +18,3 @@ export const planOverrideSchema = s.lazySchema(() => s.object({
     paymentPreferences: s.optional(s.lazy(() => paymentPreferencesOverrideSchema)),
     taxes: s.optional(s.lazy(() => taxesOverrideSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=plan-override.js.map

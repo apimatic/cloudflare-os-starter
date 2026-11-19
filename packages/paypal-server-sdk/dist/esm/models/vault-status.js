@@ -18,4 +18,3 @@ export const VaultStatus = {
     Approved: "APPROVED",
 };
 export const vaultStatusSchema = s.enumOf(VaultStatus);
-//# sourceMappingURL=vault-status.js.map

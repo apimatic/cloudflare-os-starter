@@ -27,4 +27,3 @@ export const cardResponseAddressSchema = s.lazySchema(() => s.object({
     countryCode: s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$")),
     id: s.optional(s.string().check(s.minLength(1), s.maxLength(36), s.pattern("^[0-9A-Za-z-_]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-response-address.js.map

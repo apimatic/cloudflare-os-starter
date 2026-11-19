@@ -10,4 +10,3 @@ export const shippingNameSchema = s.lazySchema(() => s.object({
     ...shippingNameProperties,
     fullName: s.optional(s.string().check(s.maxLength(300))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=shipping-name.js.map

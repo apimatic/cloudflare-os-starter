@@ -20,4 +20,3 @@ export const subscriberSchema = s.lazySchema(() => s.object({
     shippingAddress: s.optional(s.lazy(() => shippingDetailsSubscriptionsSchema)),
     paymentSource: s.optional(s.lazy(() => subscriptionPaymentSourceResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscriber.js.map

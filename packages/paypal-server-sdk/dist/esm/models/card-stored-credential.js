@@ -19,4 +19,3 @@ export const cardStoredCredentialSchema = s.lazySchema(() => s.object({
     ...cardStoredCredentialProperties,
     previousNetworkTransactionReference: s.optional(s.lazy(() => networkTransactionSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-stored-credential.js.map

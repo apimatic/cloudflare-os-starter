@@ -5,4 +5,3 @@ export const VaultTokenRequestType = {
     SetupToken: "SETUP_TOKEN",
 };
 export const vaultTokenRequestTypeSchema = s.enumOf(VaultTokenRequestType);
-//# sourceMappingURL=vault-token-request-type.js.map

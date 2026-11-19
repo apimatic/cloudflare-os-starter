@@ -41,4 +41,3 @@ export const purchaseUnitRequestSchema = s.lazySchema(() => s.object({
     shipping: s.optional(s.lazy(() => shippingDetailsSchema)),
     supplementaryData: s.optional(s.lazy(() => supplementaryDataSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=purchase-unit-request.js.map

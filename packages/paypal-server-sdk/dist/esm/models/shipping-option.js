@@ -15,4 +15,3 @@ export const shippingOptionSchema = s.lazySchema(() => s.object({
     label: s.string().check(s.maxLength(127)),
     amount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=shipping-option.js.map

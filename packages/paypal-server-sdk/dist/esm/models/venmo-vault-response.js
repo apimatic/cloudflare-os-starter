@@ -15,4 +15,3 @@ export const venmoVaultResponseSchema = s.lazySchema(() => s.object({
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(10))),
     customer: s.optional(s.lazy(() => customerInformationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-vault-response.js.map

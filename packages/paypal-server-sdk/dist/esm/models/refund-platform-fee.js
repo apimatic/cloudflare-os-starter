@@ -8,4 +8,3 @@ export const refundPlatformFeeSchema = s.lazySchema(() => s.object({
     ...refundPlatformFeeProperties,
     amount: moneySchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=refund-platform-fee.js.map

@@ -18,4 +18,3 @@ export const subscriptionErrorErrorSchema = s.lazySchema(() => s.object({
     ...subscriptionErrorErrorProperties,
     details: s.optional(s.array(s.lazy(() => errorDetailsSchema))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-error-error.js.map

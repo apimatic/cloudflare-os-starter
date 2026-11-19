@@ -23,4 +23,3 @@ export const orderTrackerRequestSchema = s.lazySchema(() => s.object({
     captureId: s.string().check(s.minLength(1), s.maxLength(50), s.pattern("^[a-zA-Z0-9]*$")),
     items: s.optional(s.array(s.lazy(() => orderTrackerItemSchema))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-tracker-request.js.map

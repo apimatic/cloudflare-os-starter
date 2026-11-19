@@ -11,4 +11,3 @@ export const EnrollmentStatus = {
     B: "B",
 };
 export const enrollmentStatusSchema = s.enumOf(EnrollmentStatus);
-//# sourceMappingURL=enrollment-status.js.map

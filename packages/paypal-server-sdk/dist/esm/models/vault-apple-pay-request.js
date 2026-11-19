@@ -10,4 +10,3 @@ export const vaultApplePayRequestSchema = s.lazySchema(() => s.object({
     token: s.optional(s.string().check(s.minLength(1), s.maxLength(10000), s.pattern("^.*$"))),
     card: s.optional(s.lazy(() => applePayRequestCardSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-apple-pay-request.js.map

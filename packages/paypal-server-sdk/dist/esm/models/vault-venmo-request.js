@@ -27,4 +27,3 @@ export const vaultVenmoRequestSchema = s.lazySchema(() => s.object({
     shipping: s.optional(s.lazy(() => vaultedDigitalWalletShippingDetailsSchema)),
     experienceContext: s.optional(s.lazy(() => venmoExperienceContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-venmo-request.js.map

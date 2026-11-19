@@ -19,4 +19,3 @@ export const capturePaymentInstructionSchema = s.lazySchema(() => s.object({
     platformFees: s.optional(s.array(s.lazy(() => platformFeeSchema)).check(s.minLength(0), s.maxLength(1))),
     payeeReceivableFxRateId: s.optional(s.string().check(s.minLength(1), s.maxLength(4000), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=capture-payment-instruction.js.map

@@ -47,4 +47,3 @@ export const payPalPaymentTokenSchema = s.lazySchema(() => s.object({
     accountId: s.optional(s.string().check(s.minLength(13), s.maxLength(13), s.pattern("^[2-9A-HJ-NP-Z]{13}$"))),
     phoneNumber: s.optional(s.lazy(() => phoneSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-payment-token.js.map

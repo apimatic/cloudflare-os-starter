@@ -22,4 +22,3 @@ export const VaultCardVerificationMethod = {
     ScaAlways: "SCA_ALWAYS",
 };
 export const vaultCardVerificationMethodSchema = s.enumOf(VaultCardVerificationMethod);
-//# sourceMappingURL=vault-card-verification-method.js.map

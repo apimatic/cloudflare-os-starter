@@ -9,4 +9,3 @@ export const paymentMethodPreferenceSchema = s.object({
         standardEntryClassCode: "standard_entry_class_code",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=payment-method-preference.js.map

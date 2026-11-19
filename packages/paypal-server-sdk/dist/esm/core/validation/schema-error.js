@@ -36,4 +36,3 @@ function issueReason(issue) {
 function literal(value) {
     return JSON.stringify(value) ?? "undefined";
 }
-//# sourceMappingURL=schema-error.js.map

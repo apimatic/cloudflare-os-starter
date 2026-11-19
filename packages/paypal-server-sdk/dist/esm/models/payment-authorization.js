@@ -52,4 +52,3 @@ export const paymentAuthorizationSchema = s.lazySchema(() => s.object({
     supplementaryData: s.optional(s.lazy(() => paymentSupplementaryDataSchema)),
     payee: s.optional(s.lazy(() => payeeBaseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-authorization.js.map

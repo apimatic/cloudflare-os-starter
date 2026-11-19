@@ -13,4 +13,3 @@ export const PaymentInitiator = {
     Merchant: "MERCHANT",
 };
 export const paymentInitiatorSchema = s.enumOf(PaymentInitiator);
-//# sourceMappingURL=payment-initiator.js.map

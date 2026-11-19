@@ -77,4 +77,3 @@ function firstValue(headers, name) {
     }
     return undefined;
 }
-//# sourceMappingURL=response-headers.js.map

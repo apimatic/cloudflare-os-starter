@@ -17,4 +17,3 @@ export const captureSubscriptionRequestSchema = s.lazySchema(() => s.object({
     note: s.string().check(s.minLength(1), s.maxLength(128), s.pattern("^.*$")),
     amount: moneySchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=capture-subscription-request.js.map

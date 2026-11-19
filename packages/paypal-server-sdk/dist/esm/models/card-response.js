@@ -39,4 +39,3 @@ export const cardResponseSchema = s.lazySchema(() => s.object({
     binDetails: s.optional(s.lazy(() => binDetailsSchema)),
     storedCredential: s.optional(s.lazy(() => cardStoredCredentialSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-response.js.map

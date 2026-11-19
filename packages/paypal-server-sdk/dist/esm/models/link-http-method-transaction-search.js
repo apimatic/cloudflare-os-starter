@@ -11,4 +11,3 @@ export const LinkHttpMethodTransactionSearch = {
     Patch: "PATCH",
 };
 export const linkHttpMethodTransactionSearchSchema = s.enumOf(LinkHttpMethodTransactionSearch);
-//# sourceMappingURL=link-http-method-transaction-search.js.map

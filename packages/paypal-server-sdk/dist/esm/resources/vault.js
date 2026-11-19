@@ -288,4 +288,3 @@ export class Vault {
     }
     Vault.ListCustomerPaymentTokensError = ListCustomerPaymentTokensError;
 })(Vault || (Vault = {}));
-//# sourceMappingURL=vault.js.map

@@ -15,4 +15,3 @@ export const frequencySchema = s.lazySchema(() => s.object({
     ...frequencyProperties,
     intervalCount: s.defaulted(s.int().check(s.gte(1), s.lte(365)), 1),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=frequency.js.map

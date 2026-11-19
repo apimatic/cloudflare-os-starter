@@ -23,4 +23,3 @@ export const applePayTokenizedCardSchema = s.lazySchema(() => s.object({
     expiry: s.optional(s.string().check(s.minLength(7), s.maxLength(7), s.pattern("^[0-9]{4}-(0[1-9]|1[0-2])$"))),
     billingAddress: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-tokenized-card.js.map

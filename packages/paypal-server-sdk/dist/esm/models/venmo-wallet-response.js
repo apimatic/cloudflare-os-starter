@@ -34,4 +34,3 @@ export const venmoWalletResponseSchema = s.lazySchema(() => s.object({
     address: s.optional(s.lazy(() => addressSchema)),
     attributes: s.optional(s.lazy(() => venmoWalletAttributesResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-response.js.map

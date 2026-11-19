@@ -25,4 +25,3 @@ export const amountBreakdownSchema = s.lazySchema(() => s.object({
     shippingDiscount: s.optional(s.lazy(() => moneySchema)),
     discount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=amount-breakdown.js.map

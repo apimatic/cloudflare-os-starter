@@ -405,4 +405,3 @@ export { CoreError as PayPalServerSdkError, ResponseError, DecodeError, EncodeEr
 export { ApiError } from "./core/api-error.js";
 export { SchemaError } from "./core/validation/schema-error.js";
 export { defaultLoggingOptions, } from "./core/logging.js";
-//# sourceMappingURL=index.js.map

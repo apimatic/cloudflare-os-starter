@@ -33,4 +33,3 @@ export const sellerReceivableBreakdownSchema = s.lazySchema(() => s.object({
     exchangeRate: s.optional(s.lazy(() => exchangeRateSchema)),
     platformFees: s.optional(s.array(s.lazy(() => platformFeeSchema)).check(s.minLength(0), s.maxLength(1))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=seller-receivable-breakdown.js.map

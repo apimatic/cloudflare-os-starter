@@ -27,4 +27,3 @@ export const addressSchema = s.lazySchema(() => s.object({
     postalCode: s.optional(s.string().check(s.maxLength(60))),
     countryCode: s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=address.js.map

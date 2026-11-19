@@ -11,4 +11,3 @@ export const AuthenticationEligibilityStatus = {
     B: "B",
 };
 export const authenticationEligibilityStatusSchema = s.enumOf(AuthenticationEligibilityStatus);
-//# sourceMappingURL=authentication-eligibility-status.js.map

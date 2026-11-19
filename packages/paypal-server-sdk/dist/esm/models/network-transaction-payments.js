@@ -18,4 +18,3 @@ export const networkTransactionPaymentsSchema = s.lazySchema(() => s.object({
     date: s.optional(s.string().check(s.minLength(4), s.maxLength(4), s.pattern("^[0-9]+$"))),
     acquirerReferenceNumber: s.optional(s.string().check(s.minLength(1), s.maxLength(36), s.pattern("^[a-zA-Z0-9]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=network-transaction-payments.js.map

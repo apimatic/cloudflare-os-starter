@@ -9,4 +9,3 @@ export const activateSubscriptionRequestSchema = s.lazySchema(() => s.object({
     ...activateSubscriptionRequestProperties,
     reason: s.optional(s.string().check(s.minLength(1), s.maxLength(128), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=activate-subscription-request.js.map

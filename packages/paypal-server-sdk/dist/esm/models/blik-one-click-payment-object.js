@@ -12,4 +12,3 @@ export const blikOneClickPaymentObjectSchema = s.lazySchema(() => s.object({
     ...blikOneClickPaymentObjectProperties,
     consumerReference: s.optional(s.string().check(s.minLength(3), s.maxLength(64), s.pattern("^[ -~]{3,64}$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=blik-one-click-payment-object.js.map

@@ -16,4 +16,3 @@ export const ApplePayPaymentDataType = {
     Emv: "EMV",
 };
 export const applePayPaymentDataTypeSchema = s.enumOf(ApplePayPaymentDataType);
-//# sourceMappingURL=apple-pay-payment-data-type.js.map

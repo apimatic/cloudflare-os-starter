@@ -43,4 +43,3 @@ function processPlatform(nodeProcess) {
     const arch = present(nodeProcess?.arch);
     return arch === undefined ? platform : `${platform} ${arch}`;
 }
-//# sourceMappingURL=runtime-environment.js.map

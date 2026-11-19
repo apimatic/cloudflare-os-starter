@@ -11,4 +11,3 @@ export const payPalWalletAttributesSchema = s.lazySchema(() => s.object({
     customer: s.optional(s.lazy(() => payPalWalletCustomerRequestSchema)),
     vault: s.optional(s.lazy(() => payPalWalletVaultInstructionSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-attributes.js.map

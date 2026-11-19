@@ -41,4 +41,3 @@ function resolveNextLink(nextLink, uri, method) {
 function originOf(url) {
     return `${url.protocol}//${url.host}`;
 }
-//# sourceMappingURL=link-state.js.map

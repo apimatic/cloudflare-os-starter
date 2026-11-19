@@ -90,4 +90,3 @@ function environmentLogLevel(name) {
     }
     return level;
 }
-//# sourceMappingURL=logging.js.map

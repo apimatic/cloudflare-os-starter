@@ -13,4 +13,3 @@ export const VaultExperienceContextShippingPreference = {
     SetProvidedAddress: "SET_PROVIDED_ADDRESS",
 };
 export const vaultExperienceContextShippingPreferenceSchema = s.enumOf(VaultExperienceContextShippingPreference);
-//# sourceMappingURL=vault-experience-context-shipping-preference.js.map

@@ -29,4 +29,3 @@ export const orderAuthorizeRequestPaymentSourceSchema = s.lazySchema(() => s.obj
     googlePay: s.optional(s.lazy(() => googlePayRequestSchema)),
     venmo: s.optional(s.lazy(() => venmoWalletRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-authorize-request-payment-source.js.map

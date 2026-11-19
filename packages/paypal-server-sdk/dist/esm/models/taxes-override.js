@@ -8,4 +8,3 @@ export const taxesOverrideSchema = s.lazySchema(() => s.object({
     ...taxesOverrideProperties,
     percentage: s.optional(s.string().check(s.pattern("^((-?[0-9]+)|(-?([0-9]+)?[.][0-9]+))$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=taxes-override.js.map

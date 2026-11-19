@@ -24,4 +24,3 @@ export const cycleExecutionSchema = s.lazySchema(() => s.object({
     currentPricingSchemeVersion: s.optional(s.int().check(s.gte(1), s.lte(99))),
     totalCycles: s.optional(s.int().check(s.gte(0), s.lte(999))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=cycle-execution.js.map

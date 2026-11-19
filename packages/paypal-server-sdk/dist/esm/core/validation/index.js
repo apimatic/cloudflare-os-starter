@@ -2,4 +2,3 @@ export { array, boolean, json, literal, nullable, optional, record, string, unio
 export { lazy, fallback, callback, optionalNullable, defaulted, dateTime, rfc1123DateTime, unixSecondsDateTime, dateOnly, bytes, base64UrlBytes, base32Bytes, base32HexBytes, base16Bytes, } from "./entries.js";
 export { object, discriminatedUnion, bestFit, enumOf, of, lazySchema } from "./schema.js";
 export { minProperties, maxProperties, uniqueItems, uriReference, jsonPointer, pattern, } from "./constraints.js";
-//# sourceMappingURL=index.js.map

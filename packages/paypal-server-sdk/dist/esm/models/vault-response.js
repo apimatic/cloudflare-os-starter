@@ -15,4 +15,3 @@ export const vaultResponseSchema = s.lazySchema(() => s.object({
     customer: s.optional(s.lazy(() => vaultCustomerSchema)),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(10))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=vault-response.js.map

@@ -40,4 +40,3 @@ export const searchResponseSchema = s.lazySchema(() => s.object({
     totalPages: s.optional(s.int().check(s.gte(0), s.lte(2147483647))),
     links: s.optional(s.array(s.lazy(() => linkDescriptionSchema)).check(s.minLength(1), s.maxLength(32767))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=search-response.js.map

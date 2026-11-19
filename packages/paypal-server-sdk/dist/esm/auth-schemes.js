@@ -10,4 +10,3 @@ export function buildAuthSchemes(options, servers, rawClient) {
             })),
     };
 }
-//# sourceMappingURL=auth-schemes.js.map

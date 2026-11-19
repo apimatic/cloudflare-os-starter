@@ -33,4 +33,3 @@ export const payerInformationSchema = s.lazySchema(() => s.object({
     countryCode: s.optional(s.string().check(s.minLength(2), s.maxLength(2), s.pattern("^([A-Z]{2}|C2)$"))),
     address: s.optional(s.lazy(() => simplePostalAddressCoarseGrainedSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payer-information.js.map

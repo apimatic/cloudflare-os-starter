@@ -13,4 +13,3 @@ export const mobileWebContextSchema = s.lazySchema(() => s.object({
     ...mobileWebContextProperties,
     buyerUserAgent: s.optional(s.string().check(s.minLength(1), s.maxLength(512), s.pattern("^.*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=mobile-web-context.js.map

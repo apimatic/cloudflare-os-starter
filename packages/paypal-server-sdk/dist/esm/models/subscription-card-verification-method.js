@@ -34,4 +34,3 @@ export const SubscriptionCardVerificationMethod = {
     AvsCvv: "AVS_CVV",
 };
 export const subscriptionCardVerificationMethodSchema = s.enumOf(SubscriptionCardVerificationMethod);
-//# sourceMappingURL=subscription-card-verification-method.js.map

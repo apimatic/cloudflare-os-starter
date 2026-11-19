@@ -11,4 +11,3 @@ export const PayPalReferenceIdType = {
     Pap: "PAP",
 };
 export const payPalReferenceIdTypeSchema = s.enumOf(PayPalReferenceIdType);
-//# sourceMappingURL=pay-pal-reference-id-type.js.map

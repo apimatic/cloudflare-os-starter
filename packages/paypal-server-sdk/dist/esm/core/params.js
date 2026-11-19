@@ -20,4 +20,3 @@ function queryValue(items, separator) {
 export function serializePairs(pairs, encode) {
     return pairs.map(([key, value]) => `${encode(key)}=${encode(value)}`).join("&");
 }
-//# sourceMappingURL=params.js.map

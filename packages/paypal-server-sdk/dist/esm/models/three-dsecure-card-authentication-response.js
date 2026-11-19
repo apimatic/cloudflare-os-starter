@@ -18,4 +18,3 @@ export const threeDSecureCardAuthenticationResponseSchema = s.lazySchema(() => s
     ...threeDSecureCardAuthenticationResponseProperties,
     authenticationId: s.optional(s.string().check(s.minLength(1), s.maxLength(255), s.pattern("^[0-9a-zA-Z_-]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=three-dsecure-card-authentication-response.js.map

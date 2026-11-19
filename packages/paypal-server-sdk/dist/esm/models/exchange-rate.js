@@ -14,4 +14,3 @@ export const exchangeRateSchema = s.lazySchema(() => s.object({
     sourceCurrency: s.optional(s.string().check(s.minLength(3), s.maxLength(3))),
     targetCurrency: s.optional(s.string().check(s.minLength(3), s.maxLength(3))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=exchange-rate.js.map

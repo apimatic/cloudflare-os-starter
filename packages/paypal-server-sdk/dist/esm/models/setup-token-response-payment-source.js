@@ -16,4 +16,3 @@ export const setupTokenResponsePaymentSourceSchema = s.lazySchema(() => s.object
     paypal: s.optional(s.lazy(() => payPalPaymentTokenSchema)),
     venmo: s.optional(s.lazy(() => venmoPaymentTokenSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=setup-token-response-payment-source.js.map

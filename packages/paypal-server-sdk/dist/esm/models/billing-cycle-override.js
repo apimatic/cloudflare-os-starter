@@ -16,4 +16,3 @@ export const billingCycleOverrideSchema = s.lazySchema(() => s.object({
     sequence: s.int().check(s.gte(1), s.lte(99)),
     totalCycles: s.optional(s.int().check(s.gte(0), s.lte(999))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=billing-cycle-override.js.map

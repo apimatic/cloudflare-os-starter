@@ -20,4 +20,3 @@ export const cardResponseWithBillingAddressSchema = s.lazySchema(() => s.object(
     expiry: s.optional(s.string().check(s.minLength(7), s.maxLength(7), s.pattern("^[0-9]{4}-(0[1-9]|1[0-2])$"))),
     currencyCode: s.optional(s.string().check(s.minLength(3), s.maxLength(3))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-response-with-billing-address.js.map

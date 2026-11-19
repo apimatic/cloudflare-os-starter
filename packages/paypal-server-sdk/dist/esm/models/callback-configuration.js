@@ -16,4 +16,3 @@ export const callbackConfigurationSchema = s.lazySchema(() => s.object({
         .check(s.minLength(1), s.maxLength(5), s.uniqueItems()),
     callbackUrl: s.string().check(s.minLength(10), s.maxLength(2040), s.pattern("^.*$"), s.url()),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=callback-configuration.js.map

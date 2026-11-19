@@ -27,4 +27,3 @@ export const applePayDecryptedTokenDataSchema = s.lazySchema(() => s.object({
     deviceManufacturerId: s.optional(s.string().check(s.minLength(1), s.maxLength(2000), s.pattern("^.*$"))),
     paymentData: s.optional(s.lazy(() => applePayPaymentDataSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-decrypted-token-data.js.map

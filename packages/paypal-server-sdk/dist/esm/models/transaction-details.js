@@ -35,4 +35,3 @@ export const transactionDetailsSchema = s.lazySchema(() => s.object({
     auctionInfo: s.optional(s.lazy(() => auctionInformationSchema)),
     incentiveInfo: s.optional(s.lazy(() => incentiveInformationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=transaction-details.js.map

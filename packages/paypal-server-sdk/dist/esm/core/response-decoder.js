@@ -202,4 +202,3 @@ function unknownDecoderKind(decoder) {
     const kind = decoder.kind;
     throw new TypeError(`Unsupported response decoder kind: ${String(kind)}`);
 }
-//# sourceMappingURL=response-decoder.js.map

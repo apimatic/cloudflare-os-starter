@@ -11,4 +11,3 @@ export const incentiveInformationSchema = s.lazySchema(() => s.object({
     ...incentiveInformationProperties,
     incentiveDetails: s.optional(s.array(s.lazy(() => incentiveDetailsSchema)).check(s.minLength(1), s.maxLength(32767))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=incentive-information.js.map

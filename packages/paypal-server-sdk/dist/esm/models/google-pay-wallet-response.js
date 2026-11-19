@@ -21,4 +21,3 @@ export const googlePayWalletResponseSchema = s.lazySchema(() => s.object({
     phoneNumber: s.optional(s.lazy(() => phoneNumberWithCountryCodeSchema)),
     card: s.optional(s.lazy(() => googlePayCardResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=google-pay-wallet-response.js.map

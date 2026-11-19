@@ -5,4 +5,3 @@ export const linkDescriptionSchema = s.object({
     rel: s.string(),
     method: s.optional(s.lazy(() => linkHttpMethodSchema)),
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=link-description.js.map

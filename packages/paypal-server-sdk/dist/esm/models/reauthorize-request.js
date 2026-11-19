@@ -8,4 +8,3 @@ export const reauthorizeRequestSchema = s.lazySchema(() => s.object({
     ...reauthorizeRequestProperties,
     amount: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=reauthorize-request.js.map

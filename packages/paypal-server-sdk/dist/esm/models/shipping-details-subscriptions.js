@@ -29,4 +29,3 @@ export const shippingDetailsSubscriptionsSchema = s.lazySchema(() => s.object({
     options: s.optional(s.array(s.lazy(() => shippingOptionSchema)).check(s.minLength(0), s.maxLength(10))),
     address: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=shipping-details-subscriptions.js.map

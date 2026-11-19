@@ -155,4 +155,3 @@ function hasToken(token) {
 function present(value) {
     return value !== undefined && value !== "" ? value : undefined;
 }
-//# sourceMappingURL=schemes.js.map

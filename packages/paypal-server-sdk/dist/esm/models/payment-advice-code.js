@@ -53,4 +53,3 @@ export const PaymentAdviceCode = {
     _43: "43",
 };
 export const paymentAdviceCodeSchema = s.enumOf(PaymentAdviceCode);
-//# sourceMappingURL=payment-advice-code.js.map

@@ -18,4 +18,3 @@ export const PayPalWalletVaultStatus = {
     Approved: "APPROVED",
 };
 export const payPalWalletVaultStatusSchema = s.enumOf(PayPalWalletVaultStatus);
-//# sourceMappingURL=pay-pal-wallet-vault-status.js.map

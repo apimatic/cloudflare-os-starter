@@ -15,4 +15,3 @@ export const amountWithBreakdownSchema = s.lazySchema(() => s.object({
     value: s.string().check(s.maxLength(32), s.pattern("^((-?[0-9]+)|(-?([0-9]+)?[.][0-9]+))$")),
     breakdown: s.optional(s.lazy(() => amountBreakdownSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=amount-with-breakdown.js.map

@@ -21,4 +21,3 @@ export const VenmoPaymentTokenUsagePattern = {
     ThresholdPostpaid: "THRESHOLD_POSTPAID",
 };
 export const venmoPaymentTokenUsagePatternSchema = s.enumOf(VenmoPaymentTokenUsagePattern);
-//# sourceMappingURL=venmo-payment-token-usage-pattern.js.map

@@ -22,4 +22,3 @@ export const venmoWalletRequestSchema = s.lazySchema(() => s.object({
     experienceContext: s.optional(s.lazy(() => venmoWalletExperienceContextSchema)),
     attributes: s.optional(s.lazy(() => venmoWalletAdditionalAttributesSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=venmo-wallet-request.js.map

@@ -14,4 +14,3 @@ export const customerSchema = s.lazySchema(() => s.object({
     id: s.optional(s.string().check(s.minLength(1), s.maxLength(22), s.pattern("^[0-9a-zA-Z_-]+$"))),
     merchantCustomerId: s.optional(s.string().check(s.minLength(1), s.maxLength(64), s.pattern("^[0-9a-zA-Z-_.^*$@#]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=customer.js.map

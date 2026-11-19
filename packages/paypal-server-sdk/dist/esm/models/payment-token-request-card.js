@@ -22,4 +22,3 @@ export const paymentTokenRequestCardSchema = s.lazySchema(() => s.object({
     securityCode: s.optional(s.string().check(s.minLength(3), s.maxLength(4), s.pattern("^[0-9]{3,4}$"))),
     billingAddress: s.optional(s.lazy(() => addressSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=payment-token-request-card.js.map

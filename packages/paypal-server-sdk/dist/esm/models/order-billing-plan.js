@@ -17,4 +17,3 @@ export const orderBillingPlanSchema = s.lazySchema(() => s.object({
     setupFee: s.optional(s.lazy(() => moneySchema)),
     name: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern("^[A-Za-z0-9() +',.:-]+$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-billing-plan.js.map

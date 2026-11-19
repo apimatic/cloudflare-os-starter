@@ -384,4 +384,3 @@ export class Payments {
     }
     Payments.VoidPaymentError = VoidPaymentError;
 })(Payments || (Payments = {}));
-//# sourceMappingURL=payments.js.map

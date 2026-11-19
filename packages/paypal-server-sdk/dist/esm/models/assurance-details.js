@@ -7,4 +7,3 @@ export const assuranceDetailsSchema = s.object({
         cardHolderAuthenticated: "card_holder_authenticated",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=assurance-details.js.map

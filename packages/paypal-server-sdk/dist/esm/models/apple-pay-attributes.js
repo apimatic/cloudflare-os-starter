@@ -10,4 +10,3 @@ export const applePayAttributesSchema = s.lazySchema(() => s.object({
     ...applePayAttributesProperties,
     customer: s.optional(s.lazy(() => customerInformationSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=apple-pay-attributes.js.map

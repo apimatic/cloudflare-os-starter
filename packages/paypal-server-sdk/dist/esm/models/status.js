@@ -9,4 +9,3 @@ export const Status = {
     Expired: "EXPIRED",
 };
 export const statusSchema = s.enumOf(Status);
-//# sourceMappingURL=status.js.map

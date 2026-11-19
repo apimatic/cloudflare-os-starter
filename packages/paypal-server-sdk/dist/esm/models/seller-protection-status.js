@@ -18,4 +18,3 @@ export const SellerProtectionStatus = {
     NotEligible: "NOT_ELIGIBLE",
 };
 export const sellerProtectionStatusSchema = s.enumOf(SellerProtectionStatus);
-//# sourceMappingURL=seller-protection-status.js.map

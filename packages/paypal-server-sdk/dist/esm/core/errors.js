@@ -189,4 +189,3 @@ export class ConfigurationError extends Error {
         Object.setPrototypeOf(this, new.target.prototype);
     }
 }
-//# sourceMappingURL=errors.js.map

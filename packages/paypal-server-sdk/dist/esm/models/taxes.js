@@ -10,4 +10,3 @@ export const taxesSchema = s.lazySchema(() => s.object({
     ...taxesProperties,
     percentage: s.string().check(s.pattern("^((-?[0-9]+)|(-?([0-9]+)?[.][0-9]+))$")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=taxes.js.map

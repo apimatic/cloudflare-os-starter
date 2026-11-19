@@ -11,4 +11,3 @@ export const PayPalPaymentTokenUsageType = {
     Platform: "PLATFORM",
 };
 export const payPalPaymentTokenUsageTypeSchema = s.enumOf(PayPalPaymentTokenUsageType);
-//# sourceMappingURL=pay-pal-payment-token-usage-type.js.map

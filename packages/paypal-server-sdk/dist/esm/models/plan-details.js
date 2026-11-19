@@ -33,4 +33,3 @@ export const planDetailsSchema = s.lazySchema(() => s.object({
     merchantPreferences: s.optional(s.lazy(() => merchantPreferencesSchema)),
     taxes: s.optional(s.lazy(() => taxesSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=plan-details.js.map

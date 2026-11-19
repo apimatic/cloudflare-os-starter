@@ -9,4 +9,3 @@ export const PricingModel = {
     AutoReload: "AUTO_RELOAD",
 };
 export const pricingModelSchema = s.enumOf(PricingModel);
-//# sourceMappingURL=pricing-model.js.map

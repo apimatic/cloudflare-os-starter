@@ -8,4 +8,3 @@ export const PhoneTypeSubscriptions = {
     Pager: "PAGER",
 };
 export const phoneTypeSubscriptionsSchema = s.enumOf(PhoneTypeSubscriptions);
-//# sourceMappingURL=phone-type-subscriptions.js.map

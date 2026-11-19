@@ -8,4 +8,3 @@ export const captureStatusWithDetailsSchema = s.object({
         statusDetails: "status_details",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=capture-status-with-details.js.map

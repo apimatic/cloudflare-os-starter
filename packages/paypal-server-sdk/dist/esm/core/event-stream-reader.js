@@ -227,4 +227,3 @@ class EventStreamParser {
         return text.charCodeAt(0) === BYTE_ORDER_MARK_CODE ? text.slice(1) : text;
     }
 }
-//# sourceMappingURL=event-stream-reader.js.map

@@ -20,4 +20,3 @@ export const customerInformationSchema = s.lazySchema(() => s.object({
     phone: s.optional(s.lazy(() => phoneWithTypeSchema)),
     name: s.optional(s.lazy(() => nameSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=customer-information.js.map

@@ -15,4 +15,3 @@ export const cardSupplementaryDataSchema = s.lazySchema(() => s.object({
     level2: s.optional(s.lazy(() => level2CardProcessingDataSchema)),
     level3: s.optional(s.lazy(() => level3CardProcessingDataSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=card-supplementary-data.js.map

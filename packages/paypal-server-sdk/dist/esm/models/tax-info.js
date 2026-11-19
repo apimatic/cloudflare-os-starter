@@ -15,4 +15,3 @@ export const taxInfoSchema = s.lazySchema(() => s.object({
     ...taxInfoProperties,
     taxId: s.string().check(s.minLength(1), s.maxLength(14), s.pattern("([a-zA-Z0-9])")),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=tax-info.js.map

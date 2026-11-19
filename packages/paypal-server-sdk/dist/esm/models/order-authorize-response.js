@@ -35,4 +35,3 @@ export const orderAuthorizeResponseSchema = s.lazySchema(() => s.object({
     payer: s.optional(s.lazy(() => payerSchema)),
     purchaseUnits: s.optional(s.array(s.lazy(() => purchaseUnitSchema)).check(s.minLength(1), s.maxLength(10))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-authorize-response.js.map

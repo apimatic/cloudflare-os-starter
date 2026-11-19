@@ -24,4 +24,3 @@ export const oneTimeChargeSchema = s.lazySchema(() => s.object({
     subtotal: s.optional(s.lazy(() => moneySchema)),
     totalAmount: moneySchema,
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=one-time-charge.js.map

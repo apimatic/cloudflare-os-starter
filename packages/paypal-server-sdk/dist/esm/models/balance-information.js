@@ -20,4 +20,3 @@ export const balanceInformationSchema = s.lazySchema(() => s.object({
     availableBalance: s.optional(s.lazy(() => moneyTransactionSearchSchema)),
     withheldBalance: s.optional(s.lazy(() => moneyTransactionSearchSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=balance-information.js.map

@@ -13,4 +13,3 @@ export const payPalWalletStoredCredentialSchema = s.object({
         usagePattern: "usage_pattern",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=pay-pal-wallet-stored-credential.js.map

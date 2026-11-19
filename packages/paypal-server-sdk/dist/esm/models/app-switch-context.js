@@ -15,4 +15,3 @@ export const appSwitchContextSchema = s.lazySchema(() => s.object({
     nativeApp: s.optional(s.lazy(() => nativeAppContextSchema)),
     mobileWeb: s.optional(s.lazy(() => mobileWebContextSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=app-switch-context.js.map

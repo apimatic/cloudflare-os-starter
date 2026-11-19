@@ -16,4 +16,3 @@ export const PayPalWalletAccountVerificationStatus = {
     Unverified: "UNVERIFIED",
 };
 export const payPalWalletAccountVerificationStatusSchema = s.enumOf(PayPalWalletAccountVerificationStatus);
-//# sourceMappingURL=pay-pal-wallet-account-verification-status.js.map

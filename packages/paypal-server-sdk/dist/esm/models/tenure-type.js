@@ -14,4 +14,3 @@ export const TenureType = {
     Trial: "TRIAL",
 };
 export const tenureTypeSchema = s.enumOf(TenureType);
-//# sourceMappingURL=tenure-type.js.map

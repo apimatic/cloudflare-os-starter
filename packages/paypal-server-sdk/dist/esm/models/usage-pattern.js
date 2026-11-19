@@ -53,4 +53,3 @@ export const UsagePattern = {
     InstallmentPostpaid: "INSTALLMENT_POSTPAID",
 };
 export const usagePatternSchema = s.enumOf(UsagePattern);
-//# sourceMappingURL=usage-pattern.js.map

@@ -13,4 +13,3 @@ export const storeInformationSchema = s.lazySchema(() => s.object({
     storeId: s.optional(s.string().check(s.minLength(1), s.maxLength(100), s.pattern("^[a-zA-Z0-9]*$"))),
     terminalId: s.optional(s.string().check(s.minLength(1), s.maxLength(60), s.pattern("^[a-zA-Z0-9]*$"))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=store-information.js.map

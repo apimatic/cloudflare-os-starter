@@ -59,4 +59,3 @@ export const capturedPaymentSchema = s.lazySchema(() => s.object({
     supplementaryData: s.optional(s.lazy(() => paymentSupplementaryDataSchema)),
     payee: s.optional(s.lazy(() => payeeBaseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=captured-payment.js.map

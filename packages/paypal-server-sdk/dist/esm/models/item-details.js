@@ -69,4 +69,3 @@ export const itemDetailsSchema = s.lazySchema(() => s.object({
     invoiceNumber: s.optional(s.string().check(s.minLength(1), s.maxLength(200), s.pattern("^[a-zA-Z0-9_'\\-., \":;\\!?]*$"))),
     checkoutOptions: s.optional(s.array(s.lazy(() => checkoutOptionSchema)).check(s.minLength(1), s.maxLength(32767))),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=item-details.js.map

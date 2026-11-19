@@ -17,4 +17,3 @@ export const ReturnFlowPaymentMethodTokens = {
     Manual: "MANUAL",
 };
 export const returnFlowPaymentMethodTokensSchema = s.enumOf(ReturnFlowPaymentMethodTokens);
-//# sourceMappingURL=return-flow-payment-method-tokens.js.map

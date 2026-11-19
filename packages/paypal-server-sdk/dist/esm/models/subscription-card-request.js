@@ -27,4 +27,3 @@ export const subscriptionCardRequestSchema = s.lazySchema(() => s.object({
     billingAddress: s.optional(s.lazy(() => addressSchema)),
     attributes: s.optional(s.lazy(() => subscriptionsCardAttributesSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-card-request.js.map

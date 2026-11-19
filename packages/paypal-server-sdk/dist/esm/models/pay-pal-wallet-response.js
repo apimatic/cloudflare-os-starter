@@ -52,4 +52,3 @@ export const payPalWalletResponseSchema = s.lazySchema(() => s.object({
     address: s.optional(s.lazy(() => addressSchema)),
     attributes: s.optional(s.lazy(() => payPalWalletAttributesResponseSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=pay-pal-wallet-response.js.map

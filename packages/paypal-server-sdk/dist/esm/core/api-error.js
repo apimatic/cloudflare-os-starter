@@ -20,4 +20,3 @@ export class ApiError extends ResponseErrorBase {
         this.payload = init.payload;
     }
 }
-//# sourceMappingURL=api-error.js.map

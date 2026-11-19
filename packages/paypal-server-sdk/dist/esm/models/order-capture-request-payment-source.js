@@ -29,4 +29,3 @@ export const orderCaptureRequestPaymentSourceSchema = s.lazySchema(() => s.objec
     googlePay: s.optional(s.lazy(() => googlePayRequestSchema)),
     venmo: s.optional(s.lazy(() => venmoWalletRequestSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=order-capture-request-payment-source.js.map

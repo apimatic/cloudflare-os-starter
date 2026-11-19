@@ -22,4 +22,3 @@ export const ShippingType = {
     PickupFromPerson: "PICKUP_FROM_PERSON",
 };
 export const shippingTypeSchema = s.enumOf(ShippingType);
-//# sourceMappingURL=shipping-type.js.map

@@ -14,4 +14,3 @@ export const level2CardProcessingDataSchema = s.lazySchema(() => s.object({
     invoiceId: s.optional(s.string().check(s.minLength(1), s.maxLength(127), s.pattern('^[\\w‘\\-.,":;\\!?]*$'))),
     taxTotal: s.optional(s.lazy(() => moneySchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=level2-card-processing-data.js.map

@@ -31,4 +31,3 @@ export const subscriptionApplicationContextSchema = s.lazySchema(() => s.object(
     returnUrl: s.string().check(s.minLength(10), s.maxLength(4000), s.url()),
     cancelUrl: s.string().check(s.minLength(10), s.maxLength(4000), s.url()),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=subscription-application-context.js.map

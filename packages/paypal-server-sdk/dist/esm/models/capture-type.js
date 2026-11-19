@@ -5,4 +5,3 @@ export const CaptureType = {
     OutstandingBalance: "OUTSTANDING_BALANCE",
 };
 export const captureTypeSchema = s.enumOf(CaptureType);
-//# sourceMappingURL=capture-type.js.map

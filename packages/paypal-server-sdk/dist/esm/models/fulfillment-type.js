@@ -21,4 +21,3 @@ export const FulfillmentType = {
     PickupFromPerson: "PICKUP_FROM_PERSON",
 };
 export const fulfillmentTypeSchema = s.enumOf(FulfillmentType);
-//# sourceMappingURL=fulfillment-type.js.map

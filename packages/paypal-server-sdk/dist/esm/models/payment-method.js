@@ -6,4 +6,3 @@ export const paymentMethodSchema = s.object({
         payeePreferred: "payee_preferred",
     },
 }, { additionalProperties: s.json() });
-//# sourceMappingURL=payment-method.js.map

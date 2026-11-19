@@ -10,4 +10,3 @@ export const UpcType = {
     Upc5: "UPC-5",
 };
 export const upcTypeSchema = s.enumOf(UpcType);
-//# sourceMappingURL=upc-type.js.map

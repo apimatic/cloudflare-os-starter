@@ -289,4 +289,3 @@ function paramName(rawKey) {
     const bracket = key.indexOf("[");
     return bracket === -1 ? key : key.slice(0, bracket);
 }
-//# sourceMappingURL=http-logger.js.map

@@ -29,4 +29,3 @@ export const modifySubscriptionRequestSchema = s.lazySchema(() => s.object({
     applicationContext: s.optional(s.lazy(() => subscriptionPatchApplicationContextSchema)),
     plan: s.optional(s.lazy(() => planOverrideSchema)),
 }, { additionalProperties: s.json() }));
-//# sourceMappingURL=modify-subscription-request.js.map
