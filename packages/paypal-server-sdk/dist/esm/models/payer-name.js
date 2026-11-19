@@ -1,0 +1,30 @@
+import * as s from "../core/validation/index.js";
+const payerNameProperties = {
+    prefix: s.optional(s.string()),
+    givenName: s.optional(s.string()),
+    surname: s.optional(s.string()),
+    middleName: s.optional(s.string()),
+    suffix: s.optional(s.string()),
+    alternateFullName: s.optional(s.string()),
+    fullName: s.optional(s.string()),
+    _keysMap: {
+        givenName: "given_name",
+        middleName: "middle_name",
+        alternateFullName: "alternate_full_name",
+        fullName: "full_name",
+    },
+};
+export const payerNameInternalSchema = s.object(payerNameProperties, {
+    additionalProperties: s.json(),
+});
+export const payerNameSchema = s.lazySchema(() => s.object({
+    ...payerNameProperties,
+    prefix: s.optional(s.string().check(s.maxLength(140))),
+    givenName: s.optional(s.string().check(s.maxLength(140))),
+    surname: s.optional(s.string().check(s.maxLength(140))),
+    middleName: s.optional(s.string().check(s.maxLength(140))),
+    suffix: s.optional(s.string().check(s.maxLength(140))),
+    alternateFullName: s.optional(s.string().check(s.maxLength(300))),
+    fullName: s.optional(s.string().check(s.maxLength(300))),
+}, { additionalProperties: s.json() }));
+//# sourceMappingURL=payer-name.js.map

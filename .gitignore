@@ -1,5 +1,7 @@
 node_modules/
 packages/*/dist/
+# The vendored PayPal SDK ships its build: it is not on npm, and the gatekeeper imports dist/esm.
+!packages/paypal-server-sdk/dist/
 packages/*/*.tgz
 packages/*/.wrangler/
 packages/*/wrangler.prod.jsonc

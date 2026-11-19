@@ -1,0 +1,29 @@
+import type { JsonValue, Schema } from "../core/validation/schema.js";
+import { type VenmoWalletAdditionalAttributes } from "./venmo-wallet-additional-attributes.js";
+import { type VenmoWalletExperienceContext } from "./venmo-wallet-experience-context.js";
+/** Information needed to pay using Venmo. */
+export type VenmoWalletRequest = {
+    /**
+     * The PayPal-generated ID for the vaulted payment source. This ID should be stored on the
+     * merchant's server so the saved payment source can be used for future transactions.
+     */
+    vaultId?: string;
+    /**
+     * The internationalized email address. Note: Up to 64 characters are allowed before and 255
+     * characters are allowed after the \@ sign. However, the generally accepted maximum length for an
+     * email address is 254 characters. The pattern verifies that an unquoted \@ sign exists.
+     */
+    emailAddress?: string;
+    /**
+     * Customizes the buyer experience during the approval process for payment with Venmo. Note:
+     * Partners and Marketplaces might configure shipping_preference during partner account setup,
+     * which overrides the request values.
+     */
+    experienceContext?: VenmoWalletExperienceContext;
+    /** Additional attributes associated with the use of this Venmo Wallet. */
+    attributes?: VenmoWalletAdditionalAttributes;
+    /** Properties the service sent or accepts beyond those declared. */
+    additionalProperties?: Record<string, JsonValue>;
+};
+export declare const venmoWalletRequestInternalSchema: Schema<VenmoWalletRequest>;
+export declare const venmoWalletRequestSchema: Schema<VenmoWalletRequest>;

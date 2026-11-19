@@ -5,13 +5,15 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
-    "types:check": "tsc --noEmit",
+    "types:sync": "node scripts/sync-types.mjs",
+    "types:check": "node scripts/sync-types.mjs --check && tsc --noEmit",
     "test:run": "vitest run"
   },
   "dependencies": {
     "@gadgets/workshop-shared": "link:../../cloudflare-os/packages/workshop-shared",
     "capnweb": "catalog:",
-    "capnweb-validate": "catalog:"
+    "capnweb-validate": "catalog:",
+    "paypal-server-sdk": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/vitest-plugin": "catalog:",

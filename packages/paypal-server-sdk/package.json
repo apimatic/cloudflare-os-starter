@@ -1,0 +1,19 @@
+{
+  "name": "paypal-server-sdk",
+  "version": "2.29.0",
+  "private": true,
+  "description": "Vendored ESM build of the APIMatic PayPal Server SDK (apimatic/paypal-typescript-sdk), used by the PayPal gatekeeper.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "zod": "^4.1.0"
+  }
+}

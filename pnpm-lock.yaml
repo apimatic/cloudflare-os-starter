@@ -102,6 +102,9 @@ importers:
       capnweb-validate:
         specifier: 'catalog:'
         version: 0.3.0(capnweb@0.12.0)(esbuild@0.28.2)(rolldown@1.2.2)(rollup@4.62.4)(vite@7.3.6(@types/node@26.1.0)(lightningcss@1.33.0))
+      paypal-server-sdk:
+        specifier: workspace:*
+        version: link:../paypal-server-sdk
     devDependencies:
       '@cloudflare/vitest-plugin':
         specifier: 'catalog:'
@@ -146,6 +149,12 @@ importers:
       wrangler:
         specifier: 'catalog:'
         version: 4.147.0(@cloudflare/workers-types@5.20261015.1)(@types/node@26.1.0)
+
+  packages/paypal-server-sdk:
+    dependencies:
+      zod:
+        specifier: ^4.1.0
+        version: 4.6.5
 
 packages:
 
