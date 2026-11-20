@@ -6,4 +6,5 @@ packages/*/*.tgz
 packages/*/.wrangler/
 packages/*/wrangler.prod.jsonc
 deployment.local.jsonc
+deployment.team.jsonc
 .cf-os/
