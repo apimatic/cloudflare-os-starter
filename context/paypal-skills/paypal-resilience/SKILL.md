@@ -23,7 +23,7 @@ So one read can take well over a minute in a bad moment, and a write in a reques
 "It was not resent" is not "the write did not happen", and a write that timed out may have succeeded. The tool is `payPalRequestId`:
 
 - **Key it on something you already hold** — a reference derived deterministically from your own record (`shop-order-${orderId}-capture-${attempt}`), stored on the claim row before the call. **A key generated inside the code that retries (`crypto.randomUUID()` per call) is a fresh key on every attempt, which deduplicates nothing while looking exactly like a solution.**
-- **Prefix it with the app's name**: keys are shared by every Gadget and chat in the workspace.
+- **Prefix it with the app's name and a store id**: keys are shared by every Gadget and chat in the workspace and remembered for good, across data resets and rebuilds. Generate the store id once, save it with your data (`shopfront-7f3a-order-12-authorize-1`), and make a new one whenever the data is wiped — otherwise order 1 of a fresh store gets the old order 1's outcomes back.
 - 1–108 printable characters, no spaces.
 
 What a repeat returns, per outcome (same `payPalRequestId`, same operation):
@@ -33,12 +33,23 @@ What a repeat returns, per outcome (same `payPalRequestId`, same operation):
 | `ok` | the same `ok` result, without acting again | done — use it |
 | `error`, `invalid_request` | evaluated again (nothing was stored) | fix the request |
 | `error`, `api` with a 4xx (`INSTRUMENT_DECLINED`, `REFUND_AMOUNT_EXCEEDED`, …) | the same error — final for this key | branch on the issue; a corrected attempt needs a **new** key (`…-authorize-2`) |
+| `error`, `api` with 429 | the same error — final for this key | a service error ("try again shortly"); the later attempt needs a **new** key |
 | `error`, `network`; `api` with 5xx or `UNREADABLE_RESPONSE` | **sent again**; PayPal returns the original result if the first attempt landed | the safe way to settle — or read state first (below) |
 | `error`, `NOT_CONFIGURED` / `AUTHENTICATION_FAILURE` | sent again | wait for the deployment to be fixed; don't loop |
 | `pending` | waits for the same action again | don't repeat — poll `getActionResult(actionId)` |
 | `declined` | submitted again for approval | only if the user asks again |
 
-**Same key, different request** (another amount, another card) is refused as `invalid_request` — so every distinct request gets its own key: two partial refunds of one capture are `refund-${captureId}-1` and `refund-${captureId}-2`, with the counter kept in your records. A test key reused in production returns the test's outcome: test runs use keys of their own.
+**One key, one request, for good.** Once a write has been sent under a key — whatever came back — the gatekeeper binds that key to that exact request (a card compared by its last 4 digits and expiry, amounts, ids). The same request under it repeats or resubmits; a different one is refused as `invalid_request`.
+
+**Keep the key** only to repeat the same request: a double-click, or resuming an unknown, `declined` or `NOT_CONFIGURED` write with the same inputs.
+
+**Advance the attempt counter (a new key)** when:
+
+- the last outcome under the key was final — success, or a PayPal 4xx (429 included) — and the action has to run again: a retry after a decline, paying an order again after its hold expired, a second partial refund (`refund-${captureId}-1`, `refund-${captureId}-2`);
+- the next request differs from the one last sent under the key: another card or saved card, another amount. Keep on the claim what tells two requests apart — the `vaultId`, or the card's last 4 digits and expiry, never the full number — and compare before sending;
+- an unknown outcome was settled by a read showing the write did not land, and the caller now sends a different request.
+
+The counter lives on your own record and only goes up: deleting a claim, or moving an order back to "awaiting payment", never resets it — a new claim starts from the stored counter + 1. An `invalid_request` saying the `payPalRequestId` was already used for a different request means the counter did not advance: a bug in your code, not the caller's input. A test key reused in production returns the test's outcome: test runs use keys of their own.
 
 PayPal itself remembers ids for 6 hours (orders), 45 days (payments) and 3 hours (vault tokens); the workspace remembers them for good.
 
@@ -58,6 +69,8 @@ A failed send on a write — `network`, a 5xx, `UNREADABLE_RESPONSE`, or an `ok`
 | `createOrder` | nothing reads an order you have no id for — repeat with the same key; set `customId` / `invoiceId` so a later `searchTransactions` (up to 3 h delay) can match a paid one |
 
 Found → settle from what PayPal holds. Not found, or the read failed too → still unknown: keep the claim, repeat with the same key later, or tell the operator it is unknown. Never "failed".
+
+Every claim state needs an exit that does not wait for the original caller to come back: the operator's actions on the order (cancel, check status) run the settling read too, and settle or release the claim from what it finds.
 
 ## Pending writes
 
@@ -99,6 +112,10 @@ Several calls in one handler add up: an operator's "fulfil" that reads the hold,
 | --- | --- |
 | a second partial refund is refused as `invalid_request` | the key was reused for a different amount — each refund gets its own |
 | a retry after a decline returns the same decline | a PayPal refusal is final for its key — new attempt, new key |
+| paying again after a hold expired returns the old, expired authorization | the attempt counter did not advance — the old key returns its stored outcome |
+| a retry with another card is refused as `invalid_request` | same key, different request — advance the attempt |
+| a 429 keeps coming back for one order | 429 is final for its key — new attempt, new key |
+| an order stays "processing" until the shopper returns | an unknown claim with no settle path for the operator |
 | a write answered `pending` after ~25 s | expected without auto-approval — poll `getActionResult` |
 | `pending` forever | auto-approval of "PayPal sandbox payments" is off |
 | `invalid_request` mentioning 31 days | split the range into windows |

@@ -101,10 +101,12 @@ export interface PayPalError {
  * - An attempt whose outcome is unknown or never reached PayPal (`"declined"`, a `"network"`
  *   error, an `"api"` error with `httpStatus` 500 or more or named "UNREADABLE_RESPONSE",
  *   "NOT_CONFIGURED" or "AUTHENTICATION_FAILURE") is sent again when repeated with the same id and
- *   request.
- * - The same id with a different request is refused (`"invalid_request"`): a second partial refund
- *   of one capture needs its own id.
- * - Ids are shared by every gadget and chat in the workspace: prefix them with your app's name.
+ *   request. An `"api"` error with `httpStatus` 429 is final for its id, like any other refusal.
+ * - Once sent, an id stays bound to that request. The same id with a different request is refused
+ *   (`"invalid_request"`, naming the id): a second partial refund, a retry with another card and a
+ *   new payment after an expired hold each need their own id.
+ * - Ids are shared by every gadget and chat in the workspace and kept for good: prefix them with
+ *   your app's name and a store id that changes whenever the store's data is wiped.
  * PayPal itself also keeps each id (6 hours for orders, 45 days for payments, 3 hours for vault
  * tokens) and returns the original result for a repeat.
  *
@@ -161,8 +163,9 @@ export interface PayPalSandbox {
   /**
    * Takes held funds. With no `body.amount` the full authorized amount is captured. The result's
    * `sellerReceivableBreakdown` has the gross amount, PayPal's fee and the merchant's net. Fails with
-   * issue "AUTHORIZATION_EXPIRED" when the hold is too old: reauthorize first (see
-   * `reauthorizePayment()`).
+   * issue "AUTHORIZATION_EXPIRED" once the hold is past its 29-day validity, when it can no longer
+   * be renewed (`reauthorizePayment()` is refused too) and the order needs a new payment. A hold past
+   * its 3-day honor period is renewed before capture (see `reauthorizePayment()`).
    */
   captureAuthorizedPayment(request: {
     authorizationId: string;
@@ -173,8 +176,10 @@ export interface PayPalSandbox {
 
   /**
    * Renews a hold whose 3-day honor period has passed, within 29 days of the original
-   * authorization. Returns a NEW authorization: capture that one, not the old id. After 29 days a
-   * hold cannot be renewed and a new order must be authorized.
+   * authorization: call it before capturing such a hold. Returns a NEW authorization: capture that
+   * one, not the old id. If the renewal is refused, the original id can still be captured until its
+   * `expirationTime`. After 29 days a hold cannot be renewed and a new order must be authorized.
+   * Whether card holds accept a reauthorization is unverified.
    */
   reauthorizePayment(request: {
     authorizationId: string;

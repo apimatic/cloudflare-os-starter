@@ -56,7 +56,7 @@ One row in each table below per operation in scope that creates, sends or change
 
 **Where that rejection is handled**: the branch for `rowsWritten === 0`; the losing caller then uses the record the winner wrote (its stored result, or "already processing").
 
-**`payPalRequestId` goes on the claim row and on every write.** It is the idempotency key PayPal and the gatekeeper both honour, derived from the claimed record plus an attempt counter stored on the claim (`shop-order-${orderId}-authorize-${attempt}`) and prefixed with the app's name. Repeating a write with the same id and request returns its stored outcome; a final PayPal answer (success or refusal) stays final for that id, so a retry after a refusal increments the attempt. `paypal-resilience` has the full rules.
+**`payPalRequestId` goes on the claim row and on every write.** It is the idempotency key PayPal and the gatekeeper both honour, derived from the claimed record plus an attempt counter stored on the claim (`shop-order-${orderId}-authorize-${attempt}`) and prefixed with the app's name. Repeating a write with the same id and request returns its stored outcome; a final PayPal answer (success or refusal) stays final for that id, and the id stays bound to the request first sent under it. So the attempt increments whenever the action runs again after a final answer (a decline, paying again after an expired hold) or with a different request (another card); the counter is kept on your own record and never goes back down when a claim is deleted. `paypal-resilience` has the full rules.
 
 **UNKNOWN OUTCOMES** — what settles a write PayPal may have acted on without your code learning the answer.
 
@@ -176,4 +176,5 @@ A standalone PayPal question with no code change: look it up in `paypal-getting-
 - **Never derive `payPalRequestId` from a value made per attempt**, never reuse one for a different request, and **never repeat a `pending` write** — poll `getActionResult`.
 - **Never ship `payPalMockResponse`** outside tests.
 - **Never capture the old authorization id after `reauthorizePayment`** — it returns a new one.
+- **Never re-create a claim from a counter that did not move** — the new claim reuses the old key and gets the old outcome back.
 - **Never renew a hold in reaction to `AUTHORIZATION_EXPIRED`** — that issue means the hold is past renewal. Renew before capture, once the honor period has passed (`paypal-getting-started`, the authorization lifecycle).

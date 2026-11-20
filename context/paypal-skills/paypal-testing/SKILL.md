@@ -48,7 +48,7 @@ export function fakePayPal(answers = {}) {
 }
 ```
 
-Mirror only what the real binding does: it throws only for binding faults (here: an unqueued call, which is a test bug), and remembers each `payPalRequestId`. (The real one also re-sends a repeated key whose outcome was `network`, a 5xx or `declined`; model that in a test that needs it.)
+Mirror only what the real binding does: it throws only for binding faults (here: an unqueued call, which is a test bug), and remembers each `payPalRequestId`. (The real one also re-sends a repeated key whose outcome was `network`, a 5xx or `declined`; model that in a test that needs it.) Because the fake replays a remembered key's answer, a retry test that checks only the outcome passes on a reused key: assert that the key changed.
 
 ## Answers in model shape
 
@@ -71,7 +71,7 @@ const held = { kind: "ok", httpStatus: 201, value: {
 
 A test that checks only the result proves only that something was sent. From `calls`, assert:
 
-- the operation, and that each write carries `payPalRequestId` — **the same** when the same action runs twice (a double-click), **different** for a second partial refund or a retry after a decline;
+- the operation, and that each write carries `payPalRequestId` — **the same** when the same action runs twice (a double-click), **different** for a second partial refund, a retry after a decline, a retry with another card, and paying an order again after its hold expired;
 - `createOrder` uses `intent: "AUTHORIZE"` with one purchase unit whose `amount.value` is a string equal to the order total to the cent ("42.50", never `42.5`);
 - a card is either `{ vaultId }` or `{ number, expiry, securityCode }`, never both, and a `vaultId` is one of **this shopper's** saved cards (the invariant check ran and the binding was not called for a foreign one);
 - after `reauthorizePayment`, the capture uses the **new** authorization id;
@@ -96,6 +96,10 @@ A test that checks only the result proves only that something was sent. From `ca
 | binding fault | the fake throws | a service error, not "declined" |
 | page walk that never ends | `searchTransactions` answering `totalPages: 10000` | the walk stops at your cap and reports incomplete |
 | long range | a 60-day reconciliation | split into windows of ≤ 31 days |
+| paying again after the hold expired | the "hold expired at fulfilment" answers, then pay the order again | new create and authorize keys; the order holds the **new** authorization id |
+| another card after a lost answer | authorize → `network`; `getOrder` shows no authorization; pay with another card | a new key; no `invalid_request` |
+| rate limited | `{ kind: "error", error: { kind: "api", httpStatus: 429, name: "RATE_LIMIT_REACHED", message: "…" } }` | a service message; the next attempt uses a new key |
+| unknown claim, operator acts | authorize → `network`, then the operator cancels the order | the settling read runs; the order ends cancelled or paid, never stuck on "processing" |
 
 Also test through your own boundary: for each failure, assert the **reason is in your Gadget's answer** — a test that checks only that it failed passes on code that logs the reason and drops it. Never assert on the wording of `error.message`; assert on `kind`, `error.kind` and the issue code.
 

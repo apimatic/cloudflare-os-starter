@@ -60,8 +60,8 @@ Every money-moving or card-saving write requires `payPalRequestId` (1–108 prin
 - Derive it from your own record — `shop-order-${orderId}-authorize-1` — never from a value made per attempt (`crypto.randomUUID()` per call deduplicates nothing).
 - Same id + same request → the stored outcome, without acting again. A PayPal answer (success or refusal) is final for its id: a corrected retry (another card, a new amount) needs a new id (`…-authorize-2`).
 - An outcome that is unknown or never reached PayPal (`declined`, a `network` error, a 5xx, `UNREADABLE_RESPONSE`, `NOT_CONFIGURED`, `AUTHENTICATION_FAILURE`) is sent again when repeated with the same id and request.
-- Same id + a different request → `invalid_request`. A second partial refund needs its own id.
-- Ids are shared by every Gadget and chat in the workspace: prefix them with the app's name.
+- Same id + a different request → `invalid_request`. A second partial refund, a retry with another card and a new payment after an expired hold each need their own id.
+- Ids are shared by every Gadget and chat in the workspace and remembered for good: prefix them with the app's name and a store id that changes whenever the store's data is wiped.
 
 `paypal-resilience` has the full rules and the reconciliation reads.
 

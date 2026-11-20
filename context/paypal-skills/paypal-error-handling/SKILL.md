@@ -76,7 +76,9 @@ Codes you have not listed get a **default arm**: show PayPal's `description` if 
 
 ## `invalid_request` — nothing was sent
 
-A request the gatekeeper refused before sending: a bug in your code or the caller's input (a card number with spaces, `value: 19.99` as a number, a 60-day search range, a `payPalRequestId` reused for a different request). Never retry it unchanged; fix the input. Nothing happened at PayPal, so there is nothing to settle and any claim can be released.
+A request the gatekeeper refused before sending: a bug in your code or the caller's input (a card number with spaces, `value: 19.99` as a number, a 60-day search range). Never retry it unchanged; fix the input. Nothing happened at PayPal for this call, so there is nothing to settle and its claim can be released.
+
+One `invalid_request` is never the caller's fault: a `payPalRequestId` already used for a different request (the message names the id). That key belongs to the earlier request; advance the attempt counter (`paypal-resilience`), and don't ask the user to change anything.
 
 ## Deployment-configuration errors
 
@@ -89,7 +91,7 @@ On a **write**, `network`, a 5xx, or `UNREADABLE_RESPONSE` means **nothing was l
 ## `pending` and `declined`
 
 - `pending`: the write was accepted but has not run (it waits for the user's approval, or auto-approval). Persist `actionId` with the operation it belongs to, show "processing", and call `getActionResult(actionId)` later; it returns the same envelope once decided. **Never repeat the call.**
-- `declined`: the user did not allow the write. Nothing reached PayPal. Release the claim; a later attempt with the same id and request will be submitted again.
+- `declined`: the user did not allow the write. Nothing reached PayPal. Release the claim; a later attempt with the same id and the **same** request is submitted again, while a different request (another card) needs a new id.
 
 ## What still throws
 
