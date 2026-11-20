@@ -176,3 +176,4 @@ A standalone PayPal question with no code change: look it up in `paypal-getting-
 - **Never derive `payPalRequestId` from a value made per attempt**, never reuse one for a different request, and **never repeat a `pending` write** — poll `getActionResult`.
 - **Never ship `payPalMockResponse`** outside tests.
 - **Never capture the old authorization id after `reauthorizePayment`** — it returns a new one.
+- **Never renew a hold in reaction to `AUTHORIZATION_EXPIRED`** — that issue means the hold is past renewal. Renew before capture, once the honor period has passed (`paypal-getting-started`, the authorization lifecycle).

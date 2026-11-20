@@ -84,8 +84,9 @@ A test that checks only the result proves only that something was sent. From `ca
 | --- | --- | --- |
 | card declined | `{ kind: "error", error: { kind: "api", httpStatus: 422, name: "UNPROCESSABLE_ENTITY", details: [{ issue: "INSTRUMENT_DECLINED" }] } }` | a clear "try another card", the order still payable, the next attempt with a new key |
 | declined as success | `ok` with authorization `status: "DENIED"` | the same as a decline — not a hold |
-| hold expired at fulfilment | capture → `AUTHORIZATION_EXPIRED`; `reauthorizePayment` → `ok` with a new id | capture retried on the new id |
-| hold can't be renewed | capture → `AUTHORIZATION_EXPIRED`; reauthorize → an `api` error | an operator message that says nothing was charged and what to do |
+| hold past its honor period at fulfilment | the stored hold's `createTime` more than 3 days back; `reauthorizePayment` → `ok` with a new id | `reauthorizePayment` called **before** any capture; the capture uses the new id |
+| renewal refused | the same hold; `reauthorizePayment` → an `api` error | the original id is captured; fulfilment does not fail |
+| hold expired at fulfilment | `expirationTime` in the past, or capture → `AUTHORIZATION_EXPIRED` | no `reauthorizePayment` call; an operator message that says nothing was charged and the order needs a new payment |
 | over-refund | `REFUND_AMOUNT_EXCEEDED` | refused with the reason; your own refundable balance never goes below zero |
 | lost answer on a write | `{ kind: "error", error: { kind: "network", message: "…" } }` | the settling read (or same-key repeat) is made; the order is not marked failed |
 | never sent | `invalid_request` | the claim released; no settling read |
@@ -104,7 +105,7 @@ Keep these runs separate from the fake ones, and never assert on ids or timestam
 
 - Reads run immediately. Writes are logged and may need the user's approval; with auto-approval of "PayPal sandbox payments" off they answer `pending`: in `executeCode`, return and check `getActionResult` after the next turn.
 - Use a **unique `payPalRequestId` per test run** (`test-${Date.now()}-authorize`): an id's outcome is remembered, and a test id must never be one your real records could produce.
-- **Force a failure** with `payPalMockResponse` on the calls that move money: `'{"mock_application_codes":"INSTRUMENT_DECLINED"}'` on `authorizeOrder` or `createOrder`, `'{"mock_application_codes":"AUTHORIZATION_EXPIRED"}'` on `captureAuthorizedPayment`. Other issue codes from an operation's PayPal error list are **UNVERIFIED** until a run shows them. The 3-day hold period cannot be waited out: cover reauthorization with a mock.
+- **Force a failure** with `payPalMockResponse` on the calls that move money: `'{"mock_application_codes":"INSTRUMENT_DECLINED"}'` on `authorizeOrder` or `createOrder`, `'{"mock_application_codes":"AUTHORIZATION_EXPIRED"}'` on `captureAuthorizedPayment`. Other issue codes from an operation's PayPal error list are **UNVERIFIED** until a run shows them. The 3-day honor period cannot be waited out: cover renewal with the fake (a hold whose `createTime` is more than 3 days back); `AUTHORIZATION_EXPIRED` on a capture exercises only the expired path.
 - **Cards**: use test card numbers from the PayPal developer dashboard's card generator; `4111111111111111` with a future `"YYYY-MM"` expiry and any 3-digit code commonly works in the sandbox (**UNVERIFIED** for this account). Never a real card.
 - `invalid_request` paths ("4111 1111 1111 1111", a number amount, a 60-day range) cost nothing: nothing is sent or stored.
 - Don't expect a new payment in `searchTransactions` right away (up to 3 hours). Expect the sandbox to be slow or flaky at times: a failed sandbox run is a reason to look, not proof of a bug.

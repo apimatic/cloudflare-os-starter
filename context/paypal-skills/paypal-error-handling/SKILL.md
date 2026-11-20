@@ -66,7 +66,7 @@ if (issues.includes("INSTRUMENT_DECLINED")) …
 | --- | --- | --- |
 | `INSTRUMENT_DECLINED` | `createOrder` with a card, `authorizeOrder` | the card was refused: ask for another card; the next attempt needs a **new** `payPalRequestId` |
 | `TRANSACTION_REFUSED` | authorize, capture | refused by PayPal: show the reason; a new attempt needs a new id |
-| `AUTHORIZATION_EXPIRED` | `captureAuthorizedPayment` | the hold is too old: `reauthorizePayment` (within 29 days of the original), then capture the **new** authorization id; past that, tell the operator a new payment is needed — nothing was charged |
+| `AUTHORIZATION_EXPIRED` | `captureAuthorizedPayment` | the hold is past its 29-day validity and cannot be renewed — `reauthorizePayment` is refused too, so don't call it: tell the operator nothing was charged and the order needs a new payment. Renewal happens before capture, while the hold is still valid (`paypal-getting-started`, the authorization lifecycle) |
 | `AUTHORIZATION_ALREADY_CAPTURED` | capture | already done: read the capture (`getOrder` → `payments.captures`) and record it — treat as success, not failure |
 | `REFUND_AMOUNT_EXCEEDED` | `refundCapturedPayment` | more than remains: re-read what was refunded (`getCapturedPayment`) |
 | `DUPLICATE_INVOICE_ID` | `createOrder`, capture | the `invoiceId` was used before: a reused id from your own records, or a repeat of a call that already landed — look before resubmitting |

@@ -37,4 +37,4 @@ Total: 4,180 lines before (reference.md and the subagent included), 932 after.
 ## Still unverified (marked so in the skills)
 
 Sandbox test card numbers; `payPalMockResponse` codes other than `INSTRUMENT_DECLINED` and
-`AUTHORIZATION_EXPIRED`; whether `createPaymentToken` accepts a raw card on this PayPal account.
+`AUTHORIZATION_EXPIRED`; whether card holds accept `reauthorizePayment`.
